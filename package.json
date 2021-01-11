@@ -1,19 +1,19 @@
 {
   "name": "SnailFM",
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.0.1",
+  "description": "SnailFM is a radio station.",
   "main": "main.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/johndyer24/electron-auto-update-example.git"
+    "url": "https://github.com/snaildos/SnailFM-Application.git"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "electron .",
-    "build": "electron-builder build --mac --win --publish never",
-    "deploy": "electron-builder build --mac --win --publish always"
+    "build": "electron-builder build --win --publish never",
+    "deploy": "electron-builder build --win --publish always"
   },
-  "author": "",
+  "author": "SnailDOS",
   "license": "ISC",
   "devDependencies": {
     "electron": "^5.0.1",
