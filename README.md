@@ -1,2 +1,2 @@
-# SnailFM-Application
- A applicaiton to browse SnailFM songs.
+# SnailFM
+This is just a test, don't actually download this yet.
