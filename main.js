@@ -7,11 +7,15 @@ function createWindow () {
   mainWindow = new BrowserWindow({
     width: 800,
     height: 600,
+    icon: 'snailfm.ico',
     webPreferences: {
       nodeIntegration: true,
     },
   });
+  mainWindow.setMenuBarVisibility(false)
   mainWindow.loadFile('index.html');
+  mainWindow.setResizable(false)
+  mainWindow.on('maximize', () => mainWindow.unmaximize());
   mainWindow.on('closed', function () {
     mainWindow = null;
   });
