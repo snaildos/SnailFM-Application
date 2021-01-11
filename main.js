@@ -16,7 +16,6 @@ function createWindow () {
     mainWindow = null;
   });
     autoUpdater.checkForUpdatesAndNotify();
-  });
 }
 
 app.on('ready', () => {
