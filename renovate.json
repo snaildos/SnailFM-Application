@@ -1,5 +1,12 @@
 {
   "extends": [
     "config:base"
-  ]
+  ],
+  "automergeType": "pr",
+  "pin": "false",
+  "dependencyDashboard": "true",
+  "dependencyDashboardApproval": "true",
+  "dependencyDashboardAutoclose": "true",
+  "dependencyDashboardFooter": "SnailFM",
+
 }
