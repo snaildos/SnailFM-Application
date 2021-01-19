@@ -6,7 +6,5 @@
   "pin": "false",
   "dependencyDashboard": "true",
   "dependencyDashboardApproval": "true",
-  "dependencyDashboardAutoclose": "true",
-  "dependencyDashboardFooter": "SnailFM",
-
+  "dependencyDashboardAutoclose": "true"
 }
