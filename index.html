@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <head>
   <link rel="icon" href="snailfm.png">
-  <script src="video.js"></script>
-  <link href="video-js.css" rel="stylesheet">
-  <script src="Youtube.js"></script>
+  <script src="./YoutubeJS/video.js"></script>
+  <link href="./YoutubeJS/video-js.css" rel="stylesheet">
+  <script src="./YoutubeJS/Youtube.js"></script>
   <title>SnailFM</title>
   <style>
     html, body {
@@ -15,6 +15,30 @@
 
 h1  {
   color: black;
+}
+
+.notification  {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    box-sizing: border-box;
+      margin: 0;
+      padding: 20px;
+      font-family: sans-serif;
+      background-color: #ffffff;
+      text-align: center;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 body {
@@ -55,6 +79,17 @@ body {
       display: none;
     }
   </style>
+<!-- deprecated code lol-->
+<script>
+  videojs("my-video",{controlBar: {fullscreenToggle: false}}).ready(function(){
+    myPlayer = this;
+    myPlayer.on("fullscreenchange", function(){
+        if(myPlayer.isFullscreen()){
+            myPlayer.exitFullscreen();
+        }
+    });
+});
+</script>
 </head>
 <body>
   <h1>SnailFM</h1>
@@ -68,6 +103,13 @@ body {
     data-setup='{ "techOrder": ["youtube"], "sources": [{ "type": "video/youtube", "src": "https://www.youtube.com/watch?v=KRr1ZPF-mp4"}] }'
   >
   </video>
+  <script>
+    videojs("vid1", {
+    controlBar: {
+      fullscreenToggle: false
+    }
+});
+  </script>
   <p id="version"></p>
   <div id="notification" class="hidden">
     <p id="message"></p>

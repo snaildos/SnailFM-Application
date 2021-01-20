@@ -11713,7 +11713,7 @@
    * @default
    */
 
-  Tech.prototype.featuresFullscreenResize = false;
+  Tech.prototype.featuresFullscreenResize = true;
   /**
    * Boolean indicating whether the `Tech` supports changing the speed at which the video
    * plays. Examples:

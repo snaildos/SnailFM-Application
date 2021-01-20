@@ -80,23 +80,6 @@
   content: "\f107";
 }
 
-.vjs-icon-fullscreen-enter, .video-js .vjs-fullscreen-control .vjs-icon-placeholder {
-  font-family: VideoJS;
-  font-weight: normal;
-  font-style: normal;
-}
-.vjs-icon-fullscreen-enter:before, .video-js .vjs-fullscreen-control .vjs-icon-placeholder:before {
-  content: "\f108";
-}
-
-.vjs-icon-fullscreen-exit, .video-js.vjs-fullscreen .vjs-fullscreen-control .vjs-icon-placeholder {
-  font-family: VideoJS;
-  font-weight: normal;
-  font-style: normal;
-}
-.vjs-icon-fullscreen-exit:before, .video-js.vjs-fullscreen .vjs-fullscreen-control .vjs-icon-placeholder:before {
-  content: "\f109";
-}
 
 .vjs-icon-square {
   font-family: VideoJS;
@@ -1286,7 +1269,7 @@ video::-webkit-media-text-track-display {
   cursor: pointer;
   flex: none;
 }
-.video-js .vjs-fullscreen-control {
+.video-js {
   cursor: pointer;
   flex: none;
 }
@@ -1660,4 +1643,8 @@ video::-webkit-media-text-track-display {
 .video-js .vjs-menu *:focus:not(:focus-visible) {
   outline: none;
   background: none;
+}
+
+.vjs-default-skin .vjs-volume-control { 
+  margin-right: 20px; 
 }

@@ -1,21 +1,67 @@
+const { SSL_OP_EPHEMERAL_RSA } = require('constants');
 const { app, BrowserWindow, ipcMain } = require('electron');
 const { autoUpdater } = require('electron-updater');
+const { watchFile } = require('fs');
 
+
+
+// wait function
+function wait(ms)
+{
+    var d = new Date();
+    var d2 = null;
+    do { d2 = new Date(); }
+    while(d2-d < ms);
+}
+
+// Start the libaries
+require('./lib/rpc.js');
+
+// Loading screen
+/// create a global var, wich will keep a reference to out loadingScreen window
+let loadingScreen;
+const createLoadingScreen = () => {
+  loadingScreen = new BrowserWindow(
+    Object.assign({
+      width: 700,
+      height: 120,
+      frame: false,
+      show: true,
+      transparent: true
+    })
+  );
+  loadingScreen.setResizable(false);
+  loadingScreen.loadFile('splash.html');
+  loadingScreen.on('closed', () => (loadingScreen = null));
+  loadingScreen.webContents.on('did-finish-load', () => {
+    loadingScreen.show();
+  });
+};
+
+// Start the main program
 let mainWindow;
 
 function createWindow () {
   mainWindow = new BrowserWindow({
     width: 800,
     height: 600,
+    show: false,
     icon: 'snailfm.ico',
     webPreferences: {
       nodeIntegration: true,
     },
   });
   mainWindow.setMenuBarVisibility(false)
-  mainWindow.loadFile('index.html');
   mainWindow.setResizable(false)
+  mainWindow.loadFile('index.html');
   mainWindow.on('maximize', () => mainWindow.unmaximize());
+  mainWindow.webContents.on('did-finish-load', () => {
+    if (loadingScreen) {
+      loadingScreen.close();
+    }
+    mainWindow.show();
+  });
+  
   mainWindow.on('closed', function () {
     mainWindow = null;
   });
@@ -23,8 +69,11 @@ function createWindow () {
 }
 
 app.on('ready', () => {
-  createWindow();
-});
+  createLoadingScreen();
+  setTimeout(() => {
+    createWindow();
+  }, 4500);
+})
 
 app.on('window-all-closed', function () {
   if (process.platform !== 'darwin') {
