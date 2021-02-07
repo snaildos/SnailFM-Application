@@ -1,9 +1,16 @@
 <!DOCTYPE html>
 <head>
+  <script>
+    window.jQuery = window.$ = require('jquery');
+    const loudness = require('loudness')
+</script>
   <link rel="icon" href="snailfm.png">
   <script src="./YoutubeJS/video.js"></script>
   <link href="./YoutubeJS/video-js.css" rel="stylesheet">
   <script src="./YoutubeJS/Youtube.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <title>SnailFM</title>
   <style>
     html, body {
@@ -78,6 +85,63 @@ body {
     .hidden {
       display: none;
     }
+
+    .settings {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+  font-size: 18px;
+}
+
+/* The side navigation menu */
+.sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: #111; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-left .5s;
+  padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
   </style>
 <!-- deprecated code lol-->
 <script>
@@ -93,6 +157,7 @@ body {
 </head>
 <body>
   <h1>SnailFM</h1>
+  <button type="button" class="settings" data-toggle="modal" data-target="#myModal">Settings</button>
   <h3>Powered by <b>SnailDOS</b></h3>
   <video
     id="vid1"
@@ -110,12 +175,71 @@ body {
     }
 });
   </script>
+  <script src="https://cdn.jsdelivr.net/npm/@widgetbot/crate@3" async defer>
+    new Crate({
+      server: '522708457963388948', // SnailDOS
+      channel: '807929350762004530' // #snailfmchat
+    })
+  </script>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="account.html">My Account</a>
+</div>
+
+<script>
+  function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    $('#myModal').modal('hide');
+  }
+  
+  function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    $('#myModal').modal('show');
+  }
+  </script>
+
+<div class="modal fade" id="myModal" role="dialog">
+  <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title"><h2>SnailFM Settings</h2></h4>
+          </div>
+          <div class="modal-body">
+            <h4>Please click what settings you want too change.</h4>
+            <h4>If you don't want too change SnailFM settings, press the "More Settings" too change Account settings, encoder settings, and more.</h4>
+            <span style="font-size:20px;cursor:pointer;color:red" onclick="openNav()">&#9776; More settings</span>
+            <h2>SnailFM Settings</h2>
+            <script type="text/javascript">
+function toggle(button)
+{
+  if(document.getElementById("1").value=="OFF"){
+   document.getElementById("1").value="ON";
+   loudness.setMuted(false)}
+
+  else if(document.getElementById("1").value=="ON"){
+   document.getElementById("1").value="OFF";
+   loudness.setMuted(true)}
+}
+              </script>
+              <body>
+              <form action="">
+              <h4> Mute:</h4><input type="button" id="1" value="ON" style="color:blue"
+                     onclick="toggle(this);">
+              </form>
+          <h3>Currently signed in as:</h3>
+          UNDEFINED
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+
   <p id="version"></p>
   <div id="notification" class="hidden">
     <p id="message"></p>
-    <button id="close-button" onClick="closeNotification()">
-      Close
-    </button>
     <button id="restart-button" onClick="restartApp()" class="hidden">
       Restart
     </button>

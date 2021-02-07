@@ -4,7 +4,6 @@ const { autoUpdater } = require('electron-updater');
 const { watchFile } = require('fs');
 
 
-
 // wait function
 function wait(ms)
 {
@@ -26,6 +25,8 @@ const createLoadingScreen = () => {
       width: 700,
       height: 120,
       frame: false,
+      alwaysOnTop: true,
+      fullscreen: false,
       show: true,
       transparent: true
     })
@@ -46,6 +47,8 @@ function createWindow () {
     width: 800,
     height: 600,
     show: false,
+    fullscreen: false,
+    modal: true,
     icon: 'snailfm.ico',
     webPreferences: {
       nodeIntegration: true,
