@@ -63,12 +63,12 @@ function createWindow () {
       loadingScreen.close();
     }
     mainWindow.show();
+    autoUpdater.checkForUpdatesAndNotify();
   });
   
   mainWindow.on('closed', function () {
     mainWindow = null;
   });
-    autoUpdater.checkForUpdatesAndNotify();
 }
 
 app.on('ready', () => {
