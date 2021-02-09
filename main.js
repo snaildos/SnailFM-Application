@@ -15,6 +15,8 @@ function wait(ms)
 
 // Start the libaries
 require('./lib/rpc.js');
+console.log("RPC lib init.");
+
 
 // Loading screen
 /// create a global var, wich will keep a reference to out loadingScreen window
@@ -38,6 +40,7 @@ const createLoadingScreen = () => {
     loadingScreen.show();
   });
 };
+console.log("Loading screen ready.");
 
 // Start the main program
 let mainWindow;
@@ -63,7 +66,6 @@ function createWindow () {
       loadingScreen.close();
     }
     mainWindow.show();
-    autoUpdater.checkForUpdatesAndNotify();
   });
   
   mainWindow.on('closed', function () {
@@ -71,19 +73,17 @@ function createWindow () {
   });
 }
 
+console.log("Main screen ready.");
+
 app.on('ready', () => {
   createLoadingScreen();
+  autoUpdater.checkForUpdatesAndNotify();
+  console.log("Send check for updates signal");
+  console.log("Alright, lets go!");
   setTimeout(() => {
     createWindow();
   }, 4500);
 })
-
-app.on('window-all-closed', function () {
-  if (process.platform !== 'darwin') {
-    app.quit();
-  }
-});
-
 
 app.on('window-all-closed', function () {
   if (process.platform !== 'darwin') {
