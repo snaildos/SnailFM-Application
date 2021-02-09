@@ -205,7 +205,7 @@ body {
           <div class="modal-body">
             <h4>Please click what settings you want too change.</h4>
             <h4>If you don't want too change SnailFM settings, press the "More Settings" too change Account settings, encoder settings, and more.</h4>
-            <span style="font-size:20px;cursor:pointer;color:red" onclick="openNav()">&#9776; More settings</span>
+            <span class="hidden" style="font-size:20px;cursor:pointer;color:red" onclick="openNav()">&#9776; More settings</span>
             <h2>SnailFM Settings</h2>
             <script type="text/javascript">
 function toggle(button)
@@ -224,56 +224,5 @@ function toggle(button)
               <h4> Mute:</h4><input type="button" id="1" value="ON" style="color:blue"
                      onclick="toggle(this);">
               </form>
-          <h3>Currently signed in as:</h3>
-          UNDEFINED
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          </div>
-        </div>
-
-  <p id="version"></p>
-  <div id="notification" class="hidden">
-    <p id="message"></p>
-    <button id="close-button" onClick="closeNotification()">
-      Close
-    </button>
-    <button id="restart-button" onClick="restartApp()" class="hidden">
-      Restart
-    </button>
-  </div>
-  <script>
-    const { ipcRenderer } = require('electron');
-    const version = document.getElementById('version');
-    const notification = document.getElementById('notification');
-    const message = document.getElementById('message');
-    const restartButton = document.getElementById('restart-button');
-    
-    ipcRenderer.send('app_version');
-    ipcRenderer.on('app_version', (event, arg) => {
-      ipcRenderer.removeAllListeners('app_version');
-      version.innerText = 'Version ' + arg.version;
-    });
-
-    ipcRenderer.on('update_available', () => {
-      ipcRenderer.removeAllListeners('update_available');
-      message.innerText = 'A new update is available. Downloading now...';
-      notification.classList.remove('hidden');
-    });
-
-    ipcRenderer.on('update_downloaded', () => {
-      ipcRenderer.removeAllListeners('update_downloaded');
-      message.innerText = 'Update Downloaded. It will be installed on restart. Restart now?';
-      restartButton.classList.remove('hidden');
-      notification.classList.remove('hidden');
-    });
-
-    function closeNotification() {
-      notification.classList.add('hidden');
-    }
-    
-    function restartApp() {
-      ipcRenderer.send('restart_app');
-    }
-  </script>
 </body>
+</html>
