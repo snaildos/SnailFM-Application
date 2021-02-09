@@ -205,7 +205,7 @@ body {
           <div class="modal-body">
             <h4>Please click what settings you want too change.</h4>
             <h4>If you don't want too change SnailFM settings, press the "More Settings" too change Account settings, encoder settings, and more.</h4>
-            <span style="font-size:20px;cursor:pointer;color:red" onclick="openNav()">&#9776; More settings</span>
+            <span class="hidden" style="font-size:20px;cursor:pointer;color:red" onclick="openNav()">&#9776; More settings</span>
             <h2>SnailFM Settings</h2>
             <script type="text/javascript">
 function toggle(button)
@@ -224,15 +224,11 @@ function toggle(button)
               <h4> Mute:</h4><input type="button" id="1" value="ON" style="color:blue"
                      onclick="toggle(this);">
               </form>
-          <h3>Currently signed in as:</h3>
-          UNDEFINED
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
           </div>
         </div>
-
-  <p id="version"></p>
   <div id="notification" class="hidden">
     <p id="message"></p>
     <button id="close-button" onClick="closeNotification()">
@@ -277,3 +273,4 @@ function toggle(button)
     }
   </script>
 </body>
+</html>
