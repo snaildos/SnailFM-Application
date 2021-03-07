@@ -65,8 +65,19 @@ function createWindow () {
     if (loadingScreen) {
       loadingScreen.close();
     }
+    var isDev = require('isDev')
+
+if(isDev) {
+  console.log("In Development!")
+} else {
+  console.log("Not in Development!")
+}
     mainWindow.show();
+    console.log("Ok! Window init, let's check for updates...")
+    autoUpdater.checkForUpdatesAndNotify();
   });
+
+  
   
   mainWindow.on('closed', function () {
     mainWindow = null;
@@ -77,7 +88,6 @@ console.log("Main screen ready.");
 
 app.on('ready', () => {
   createLoadingScreen();
-  autoUpdater.checkForUpdatesAndNotify();
   console.log("Send check for updates signal");
   console.log("Alright, lets go!");
   setTimeout(() => {
