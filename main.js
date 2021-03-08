@@ -64,7 +64,7 @@ function createWindow () {
     if (loadingScreen) {
       loadingScreen.close();
     }
-    var isDev = require('isDev')
+    var isDev = require('isdev')
 
 if(isDev) {
   console.log("In Development!")
