@@ -21,7 +21,7 @@
   },
   "dependencies": {
     "discord-rpc": "^3.1.4",
-    "isdev": "1.0.1",
+    "isdev": "^1.0.1",
     "electron-updater": "^4.0.6",
     "jquery": "3.5.1",
     "loudness": "0.4.1"
