@@ -27,7 +27,6 @@ const createLoadingScreen = () => {
       width: 700,
       height: 120,
       frame: false,
-      alwaysOnTop: true,
       fullscreen: false,
       show: true,
       transparent: true
@@ -75,6 +74,7 @@ if(isDev) {
     mainWindow.show();
     console.log("Ok! Window init, let's check for updates...")
     autoUpdater.checkForUpdatesAndNotify();
+    console.log("Update checked. Let's see what happens!");
   });
 
   
@@ -88,22 +88,16 @@ console.log("Main screen ready.");
 
 app.on('ready', () => {
   createLoadingScreen();
-  console.log("Send check for updates signal");
+  console.log("Send check for updates signal...");
   console.log("Alright, lets go!");
   setTimeout(() => {
     createWindow();
-  }, 4500);
+  }, 3500);
 })
 
 app.on('window-all-closed', function () {
   if (process.platform !== 'darwin') {
     app.quit();
-  }
-});
-
-app.on('activate', function () {
-  if (mainWindow === null) {
-    createWindow();
   }
 });
 
