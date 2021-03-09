@@ -1,6 +1,6 @@
 {
   "name": "SnailFM",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "SnailFM-Application is a application too view SnailFM.",
   "main": "main.js",
   "repository": {
@@ -24,6 +24,6 @@
     "isdev": "^1.0.1",
     "jquery": "^3.6.0",
     "electron-updater": "^4.0.6",
-    "loudness": "0.4.1"
+    "loudness": "^0.4.0"
   }
 }
