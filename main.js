@@ -26,6 +26,7 @@ const createLoadingScreen = () => {
     Object.assign({
       width: 700,
       height: 120,
+      alwaysOnTop: true,
       frame: false,
       fullscreen: false,
       show: true,
@@ -92,7 +93,7 @@ app.on('ready', () => {
   console.log("Alright, lets go!");
   setTimeout(() => {
     createWindow();
-  }, 3500);
+  }, 3000);
 })
 
 app.on('window-all-closed', function () {

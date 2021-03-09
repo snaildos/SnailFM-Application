@@ -1,7 +1,7 @@
 {
   "name": "SnailFM",
-  "version": "1.0.1",
-  "description": "SnailFM is a radio station.",
+  "version": "1.0.2",
+  "description": "SnailFM-Application is a application too view SnailFM.",
   "main": "main.js",
   "repository": {
     "type": "git",
@@ -22,8 +22,8 @@
   "dependencies": {
     "discord-rpc": "^3.1.4",
     "isdev": "^1.0.1",
+    "jquery": "^3.6.0",
     "electron-updater": "^4.0.6",
-    "jquery": "3.5.1",
     "loudness": "0.4.1"
   }
 }
