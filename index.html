@@ -3,6 +3,7 @@
   <script>
     window.jQuery = window.$ = require('jquery');
     const loudness = require('loudness')
+    const axios = require('axios')
 </script>
     <script>
     // Needs window render
@@ -33,6 +34,7 @@ $('#cookie-ok').click(function(event){
   <script src="./YoutubeJS/video.js"></script>
   <link href="./YoutubeJS/video-js.css" rel="stylesheet">
   <script src="./YoutubeJS/Youtube.js"></script>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <title>SnailFM</title>
@@ -99,8 +101,12 @@ body {
       display: none;
     }
 
-    .hiddentext {
+    .video-stream html5-main-video  {
       display: none;
+    }
+
+    .hiddentext {
+      text-indent: -9999px; 
     }
 
     .settings {
@@ -158,6 +164,10 @@ body {
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
+}
+
+.nowplay  {
+  font-size: 25px;
 }
 
 #cookie{
@@ -259,11 +269,13 @@ body {
       ipcRenderer.send('restart_app');
     }
   </script>
-
+<p>
+  <h1 class="hiddentext">h</h1>
+</p>
   <video
     id="vid1"
     class="video-js vjs-default-skin center"
-    width="700" height="300"
+    width="0" height="0"
     controls
     poster="play.png"
     data-setup='{ "techOrder": ["youtube"], "sources": [{ "type": "video/youtube", "src": "https://www.youtube.com/watch?v=KRr1ZPF-mp4"}] }'
@@ -277,6 +289,20 @@ body {
 });
   </script>
   
+  <body>
+    <p id='nowPlaying' class="nowplay">Nothing</p>
+<script>
+   setInterval(()=>{
+    axios.get('http://api.snaildos.tk/now/playing').then((value) => {
+      document.getElementById('nowPlaying').innerText = value.data.playing || 'Nothing'
+    })
+  },1000);
+</script>
+<p>
+  <h2 class="hiddentext">h</h2>
+</p>
+<button onclick="window.location.reload();" class="w3-btn w3-black">Reload</button>
+
 <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <a href="myaccount.html">My Account</a>
