@@ -180,7 +180,7 @@ body {
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(212, 178, 27); /* Fallback color */
+  background-color: rgb(0, 0, 0); /* Fallback color */
 }
     #cookie-wrapper{
         display: flex;
@@ -200,23 +200,12 @@ body {
     }
 }
   </style>
-<!-- deprecated code lol-->
-<script>
-  videojs("my-video",{controlBar: {fullscreenToggle: false}}).ready(function(){
-    myPlayer = this;
-    myPlayer.on("fullscreenchange", function(){
-        if(myPlayer.isFullscreen()){
-            myPlayer.exitFullscreen();
-        }
-    });
-});
-</script>
 </head>
 <body>
 
   <div id="cookie">
     <div id="cookie-wrapper">
-        <div id="cookie-content" class="h1">Welcome too SnailFM! <p>For more infomation, visit https://snaildos.tk/snailfm</p>Hit the let's go button too start using this software!</div>
+      <div id="cookie-content" class="h1">Welcome too SnailFM! <p>For more infomation, visit https://snaildos.tk/snailfm</p>Hit the let's go button too start using this software!</div>
         <button id="cookie-ok">Let's go!</button>
     </div>
 </div>
@@ -270,15 +259,13 @@ body {
     }
   </script>
 <p>
-  <h1 class="hiddentext">h</h1>
 </p>
   <video
     id="vid1"
-    class="video-js vjs-default-skin center"
+    class="video-js vjs-default-skin center "
     width="0" height="0"
-    controls
     poster="play.png"
-    data-setup='{ "techOrder": ["youtube"], "sources": [{ "type": "video/youtube", "src": "https://www.youtube.com/watch?v=KRr1ZPF-mp4"}] }'
+    data-setup='{ "techOrder": ["youtube"], "sources": [{ "type": "video/youtube", "src": "https://www.youtube.com/watch?v=urKSQwZeNh0"}] }'
   >
   </video>
   <script>
@@ -288,8 +275,25 @@ body {
     }
 });
   </script>
-  
-  <body>
+                  <form action="">
+                    <h2>Pause/Play:</h2>
+                    <input type="button" id="4" class="w3-btn w3-black" value="PLAY"
+                           onclick="toggle2();">
+                    </form>
+
+                    <script>
+                      var player = videojs('vid1');
+                      function toggle2()
+                      {
+                        if(document.getElementById("4").value=="PLAY"){
+                         document.getElementById("4").value="PAUSE";
+                         player.play()}
+                      
+                        else if(document.getElementById("4").value=="PAUSE"){
+                         document.getElementById("4").value="PLAY";
+                         player.pause()}
+                      }
+                                    </script>
     <p id='nowPlaying' class="nowplay">Nothing</p>
 <script>
    setInterval(()=>{
@@ -298,10 +302,6 @@ body {
     })
   },1000);
 </script>
-<p>
-  <h2 class="hiddentext">h</h2>
-</p>
-<button onclick="window.location.reload();" class="w3-btn w3-black">Reload</button>
 
 <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -331,8 +331,10 @@ body {
           <div class="modal-body">
             <h4>Please click what settings you want too change.</h4>
             <h4>If you don't want too change SnailFM settings, press the "More Settings" too change Account settings, encoder settings, and more.</h4>
-            <span class="hiddentext" style="font-size:20px;cursor:pointer;color:red" onclick="openNav()">&#9776; More settings</span>
-            <a style="font-size:20px;cursor:pointer;color:red" href="reset.html">&#9776; ResetSnailFM</a>
+            <span class="hiddentext" style="font-size:20px;cursor:pointer;color:red;display:none;" onclick="openNav()">&#9776; More settings</span>
+            <button onclick="window.location.reload();" class="w3-btn w3-black">Reload</button>
+            <p></p>
+              <a style="font-size:20px;cursor:pointer;color:red" href="reset.html">&#9776; ResetSnailFM</a>
             <h2>SnailFM Settings</h2>
             <script type="text/javascript">
 function toggle(button)
