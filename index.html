@@ -297,7 +297,7 @@ body {
     <p id='nowPlaying' class="nowplay">Nothing</p>
 <script>
    setInterval(()=>{
-    axios.get('http://api.snaildos.tk/now/playing').then((value) => {
+    axios.get('http://api.snaildos.com/now/playing').then((value) => {
       document.getElementById('nowPlaying').innerText = value.data.playing || 'Nothing'
     })
   },1000);
