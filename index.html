@@ -9,7 +9,21 @@
     // Needs window render
     require('./renderer.js')
   </script>
+<script>
+  // update check
+  (function($){
+$(document).ready(function() {
 
+var version = localStorage.getItem('version');
+
+if(version != '1.0.7'){
+  console.log('Latest update is not ready.')
+  window.location.href = "update.html";
+}
+
+});
+})(jQuery);
+</script>
 <script>
   // oobe
   (function($){
