@@ -19,17 +19,20 @@ var consent = localStorage.getItem('cookie-consent');
 
 if(consent != 'true'){
   $('#cookie').fadeIn();
+  confetti.start()
 }
 
 $('#cookie-ok').click(function(event){
   localStorage.setItem('cookie-consent', 'true');
   $('#cookie').fadeOut();
+  confetti.stop()
 });
 
 });
 })(jQuery);
 </script>
 </script>
+<script src="./lib/confetti.min.js"></script>
   <link rel="icon" href="snailfm.png">
   <script src="./YoutubeJS/video.js"></script>
   <link href="./YoutubeJS/video-js.css" rel="stylesheet">
@@ -180,7 +183,7 @@ body {
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgb(167, 23, 23); /* Fallback color */
 }
     #cookie-wrapper{
         display: flex;
@@ -205,7 +208,7 @@ body {
 
   <div id="cookie">
     <div id="cookie-wrapper">
-      <div id="cookie-content" class="h1">Welcome too SnailFM! <p>For more infomation, visit https://snaildos.tk/snailfm</p>Hit the let's go button too start using this software!</div>
+      <div id="cookie-content" class="h1">Welcome too SnailFM! <p>For more infomation, visit https://snaildos.com/snailfm</p>Hit the let's go button too start using this software!</div>
         <button id="cookie-ok">Let's go!</button>
     </div>
 </div>
