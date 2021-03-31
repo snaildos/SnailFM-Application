@@ -1,5 +1,6 @@
 # SnailFM
 SnailFM is a radio station by the SnailDOS community.
+For linux installation, follow the guide below.
 
 # INSTALLATION
 Please, for the love of god, follow the wiki.
