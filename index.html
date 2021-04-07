@@ -2,7 +2,6 @@
 <head>
   <script>
     window.jQuery = window.$ = require('jquery');
-    const loudness = require('loudness')
     const axios = require('axios')
 </script>
     <script>
@@ -358,11 +357,11 @@ function toggle(button)
 {
   if(document.getElementById("1").value=="OFF"){
    document.getElementById("1").value="ON";
-   loudness.setMuted(false)}
+   player.play()}
 
   else if(document.getElementById("1").value=="ON"){
    document.getElementById("1").value="OFF";
-   loudness.setMuted(true)}
+   player.pause())}
 }
               </script>
               <body>
