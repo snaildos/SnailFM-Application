@@ -55,6 +55,7 @@ function createWindow () {
     icon: 'snailfm.ico',
     webPreferences: {
       nodeIntegration: true,
+      contextIsolation: false
     },
   });
   mainWindow.setMenuBarVisibility(false)
@@ -112,6 +113,10 @@ autoUpdater.on('update-available', () => {
 
 autoUpdater.on('update-downloaded', () => {
   mainWindow.webContents.send('update_downloaded');
+});
+
+ipcMain.on('relaunch', () => {
+  mainWindow.close();
 });
 
 ipcMain.on('restart_app', () => {

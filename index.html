@@ -228,7 +228,7 @@ body {
   
   <h1>SnailFM</h1>
   <button type="button" class="settings" data-toggle="modal" data-target="#myModal">Settings</button>
-  <h3>Powered by <b>SnailDOS</b></h3>
+  <h4>Powered by <b>SnailDOS</b> team</h4>
 
   <p id="version"></p>
   <div id="notification" class="hidden">
@@ -278,7 +278,7 @@ body {
 </p>
   <video
     id="vid1"
-    class="video-js vjs-default-skin center "
+    class="hidden"
     width="0" height="0"
     poster="play.png"
     data-setup='{ "techOrder": ["youtube"], "sources": [{ "type": "video/youtube", "src": "https://www.youtube.com/watch?v=urKSQwZeNh0"}] }'
@@ -310,7 +310,7 @@ body {
                          player.pause()}
                       }
                                     </script>
-    <p id='nowPlaying' class="nowplay">Nothing</p>
+    <p id='nowPlaying' class="nowplay">Fetching data...</p>
 <script>
    setInterval(()=>{
     axios.get('http://api.snaildos.com/now/playing').then((value) => {
@@ -352,23 +352,8 @@ body {
             <p></p>
               <a style="font-size:20px;cursor:pointer;color:red" href="reset.html">&#9776; ResetSnailFM</a>
             <h2>SnailFM Settings</h2>
-            <script type="text/javascript">
-function toggle(button)
-{
-  if(document.getElementById("1").value=="OFF"){
-   document.getElementById("1").value="ON";
-   player.play()}
-
-  else if(document.getElementById("1").value=="ON"){
-   document.getElementById("1").value="OFF";
-   player.pause())}
-}
-              </script>
               <body>
-              <form action="">
-              <h4> Mute:</h4><input type="button" id="1" value="ON" style="color:blue"
-                     onclick="toggle(this);">
-              </form>
+<h3>Comming soon....</h3>
 <h1 class="hiddentext">
 hi
 </h1>

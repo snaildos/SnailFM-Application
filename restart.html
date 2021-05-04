@@ -1,10 +1,16 @@
 <html>
     <head>
+        <script>
+                const { ipcRenderer } = require('electron');
+            function relaunch(){
+                ipcRenderer.send('relaunch');
+            }
+        </script>
     <title>Reset sucess</title>
 </head>
 <body>
     <h1> Reset Sucess </h1>
-    <h2> Please hit the exit button and start SnailFM again...</h2>
-    <button id="exit" onclick="window.close()">Exit</button>
+    <h2> Please hit the exit button to close the software, then, please restart the software after this.</h2>
+    <button id="exit" onclick="relaunch()">Relaunch</button>
 </body>
 </html>
