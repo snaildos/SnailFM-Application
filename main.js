@@ -2,6 +2,7 @@ const { autoUpdater } = require('electron-updater');
 const { SSL_OP_EPHEMERAL_RSA } = require('constants');
 const { app, BrowserWindow, ipcMain } = require('electron');
 const { watchFile } = require('fs');
+const glasstron = require('glasstron');
 
 
 // wait function
@@ -22,7 +23,7 @@ console.log("RPC lib init.");
 /// create a global var, wich will keep a reference to out loadingScreen window
 let loadingScreen;
 const createLoadingScreen = () => {
-  loadingScreen = new BrowserWindow(
+  loadingScreen = new glasstron.BrowserWindow(
     Object.assign({
       width: 700,
       height: 120,
@@ -35,6 +36,11 @@ const createLoadingScreen = () => {
   );
   loadingScreen.setResizable(false);
   loadingScreen.loadFile('splash.html');
+  loadingScreen.blurType = "acrylic";
+	//              ^~~~~~~
+	// Windows 10 1803+; for older versions you
+	// might want to use 'blurbehind'
+	loadingScreen.setBlur(true);
   loadingScreen.on('closed', () => (loadingScreen = null));
   loadingScreen.webContents.on('did-finish-load', () => {
     loadingScreen.show();
@@ -46,7 +52,7 @@ console.log("Loading screen ready.");
 let mainWindow;
 
 function createWindow () {
-  mainWindow = new BrowserWindow({
+  mainWindow = new glasstron.BrowserWindow({
     width: 800,
     height: 600,
     show: false,
@@ -60,6 +66,11 @@ function createWindow () {
   });
   mainWindow.setMenuBarVisibility(false)
   mainWindow.setResizable(false)
+  mainWindow.blurType = "blurbehind";
+	//              ^~~~~~~
+	// Windows 10 1803+; for older versions you
+	// might want to use 'blurbehind'
+	mainWindow.setBlur(true);
   mainWindow.loadFile('index.html');
   mainWindow.on('maximize', () => mainWindow.unmaximize());
   mainWindow.webContents.on('did-finish-load', () => {
