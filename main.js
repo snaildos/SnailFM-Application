@@ -22,7 +22,7 @@ console.log("RPC lib init.");
 /// create a global var, wich will keep a reference to out loadingScreen window
 let loadingScreen;
 const createLoadingScreen = () => {
-  loadingScreen = new glasstron.BrowserWindow(
+  loadingScreen = new BrowserWindow(
     Object.assign({
       width: 700,
       height: 120,
@@ -46,7 +46,7 @@ console.log("Loading screen ready.");
 let mainWindow;
 
 function createWindow () {
-  mainWindow = new glasstron.BrowserWindow({
+  mainWindow = new BrowserWindow({
     width: 800,
     height: 600,
     show: false,
