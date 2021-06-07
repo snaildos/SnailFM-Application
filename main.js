@@ -2,7 +2,16 @@ const { autoUpdater } = require('electron-updater');
 const { SSL_OP_EPHEMERAL_RSA } = require('constants');
 const { app, BrowserWindow, ipcMain } = require('electron');
 const { watchFile } = require('fs');
+// Notify
+const { Notification } = require('electron')
 
+function neterr() {
+  const notification = {
+    title: 'SnailPortal',
+    body: 'No valid network connection! Please reconnect!'
+  }
+  new Notification(notification).show()
+}
 
 // wait function
 function wait(ms)
@@ -73,6 +82,20 @@ if(isDev) {
 } else {
   console.log("Not in Development!")
 }
+
+    var internetAvailable = require("internet-available");
+
+// Set a timeout and a limit of attempts to check for connection
+internetAvailable({
+    timeout: 2000,
+    retries: 3,
+}).then(function(){
+    console.log("Internet available");
+}).catch(function(){
+    console.log("No internet");
+    neterr()
+    mainWindow.loadFile('nonet.html');
+});
     mainWindow.show();
     console.log("Ok! Window init, let's check for updates...")
     autoUpdater.checkForUpdatesAndNotify();

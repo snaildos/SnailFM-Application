@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdn.snaildos.com/w3.css">
+        <title>SnailPortal - Error</title>
+        <script>
+            const { ipcRenderer } = require('electron')
+            function relaunch(){
+                ipcRenderer.send('relaunch');
+            }
+        </script>
+    </head>
+    <body>
+        <center>
+        <h1 class="w3-center">Error</h1>
+        <h2 class="w3-red w3-center">No valid network connection!</h2>
+        <p>
+            <button class="w3-button w3-center w3-black" onclick="relaunch()">Retry</button>
+        </p>
+    </center>
+    </body>
+</html>

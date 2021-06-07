@@ -15,7 +15,7 @@ $(document).ready(function() {
 
 var version = localStorage.getItem('version');
 
-if(version != '1.0.7'){
+if(version != '2.0.1'){
   console.log('Latest update is not ready.')
   window.location.href = "update.html";
 }
@@ -50,9 +50,9 @@ $('#cookie-ok').click(function(event){
   <script src="./YoutubeJS/video.js"></script>
   <link href="./YoutubeJS/video-js.css" rel="stylesheet">
   <script src="./YoutubeJS/Youtube.js"></script>
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.snaildos.com/w3.css">
+  <link rel="stylesheet" href="https://cdn.snaildos.com/bootstrap.min.css">
+  <script src="https://cdn.snaildos.com/bootstrap.min.js"></script>
   <title>SnailFM</title>
   <style>
     
@@ -221,7 +221,7 @@ body {
 
   <div id="cookie">
     <div id="cookie-wrapper">
-      <div id="cookie-content" class="h1">Welcome too SnailFM! <p>For more infomation, visit https://snaildos.com/snailfm</p>Hit the let's go button too start using this software!</div>
+      <div id="cookie-content" class="h1">Welcome to SnailFM! <p>For more infomation, visit https://snaildos.com/snailfm</p>Hit the let's go button too start using this software!</div>
         <button id="cookie-ok">Let's go!</button>
     </div>
 </div>
@@ -316,7 +316,7 @@ body {
     axios.get('http://api.snaildos.com/now/playing').then((value) => {
       document.getElementById('nowPlaying').innerText = value.data.playing || 'Nothing'
     })
-  },1000);
+  },5000);
 </script>
 
 <div id="mySidenav" class="sidenav">
@@ -345,15 +345,15 @@ body {
             <h4 class="modal-title"><h2>SnailFM Settings</h2></h4>
           </div>
           <div class="modal-body">
-            <h4>Please click what settings you want too change.</h4>
-            <h4>If you don't want too change SnailFM settings, press the "More Settings" too change Account settings, encoder settings, and more.</h4>
+            <h4>Please click what settings you want to change.</h4>
+            <h4>If you don't want to change SnailFM settings, press the "More Settings" to change Account settings, encoder settings, and more.</h4>
             <span class="hiddentext" style="font-size:20px;cursor:pointer;color:red;display:none;" onclick="openNav()">&#9776; More settings</span>
             <button onclick="window.location.reload();" class="w3-btn w3-black">Reload</button>
             <p></p>
               <a style="font-size:20px;cursor:pointer;color:red" href="reset.html">&#9776; ResetSnailFM</a>
             <h2>SnailFM Settings</h2>
               <body>
-<h3>Comming soon....</h3>
+<h3>Soon!</h3>
 <h1 class="hiddentext">
 hi
 </h1>
