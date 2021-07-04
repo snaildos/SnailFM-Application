@@ -1,4 +1,4 @@
-electron-builder.yml
 node_modules
 dist
 .vscode/settings.json
+electron-builder.yml
