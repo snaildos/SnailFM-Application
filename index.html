@@ -132,6 +132,27 @@ body {
   font-size: 18px;
 }
 
+/* Dashed border */
+hr.dashed {
+  border-top: 3px dashed #bbb;
+}
+
+/* Dotted border */
+hr.dotted {
+  border-top: 3px dotted #bbb;
+}
+
+/* Solid border */
+hr.solid {
+  border-top: 3px solid #bbb;
+}
+
+/* Rounded border */
+hr.rounded {
+  border-top: 8px solid #bbb;
+  border-radius: 5px;
+}
+
 /* The side navigation menu */
 .sidenav {
   height: 100%; /* 100% Full-height */
@@ -225,7 +246,7 @@ body {
 </div>
   
   <h1>SnailFM</h1>
-  <button type="button" class="settings" data-toggle="modal" data-target="#myModal">Settings</button>
+  <button type="button" class="settings w3-button" data-toggle="modal" data-target="#myModal">Settings</button>
   <h4>Powered by <b>SnailDOS</b> team</h4>
 
   <p id="version"></p>
@@ -347,12 +368,10 @@ var amogus = "https://www.youtube.com/watch?v=PHLIsIAhQtc"
             <h4>Please click what settings you want to change.</h4>
             <h4>If you don't want to change SnailFM settings, press the "More Settings" to change Account settings, encoder settings, and more.</h4>
             <span class="hiddentext" style="font-size:20px;cursor:pointer;color:red;display:none;" onclick="openNav()">&#9776; More settings</span>
+<hr class="rounded">
             <button onclick="window.location.reload();" class="w3-btn w3-black">Reload</button>
             <p></p>
               <a style="font-size:20px;cursor:pointer;color:red" href="reset.html">&#9776; ResetSnailFM</a>
-            <h2>SnailFM Settings</h2>
-              <body>
-<h3>Soon!</h3>
 <h1 class="hiddentext">
 hi
 </h1>
