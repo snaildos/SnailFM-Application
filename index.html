@@ -137,6 +137,16 @@ hr.dashed {
   border-top: 3px dashed #bbb;
 }
 
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
 /* Dotted border */
 hr.dotted {
   border-top: 3px dotted #bbb;
@@ -237,7 +247,8 @@ hr.rounded {
   </style>
 </head>
 <body>
-
+  <button type="button" class="settings w3-button" data-toggle="modal" data-target="#myModal">Settings</button>
+<div class="noselect">
   <div id="cookie">
     <div id="cookie-wrapper">
       <div id="cookie-content" class="h1">Welcome to SnailFM! <p>For more infomation, visit https://snaildos.com/snailfm</p>Hit the let's go button too start using this software! Enjoy!</div>
@@ -246,7 +257,6 @@ hr.rounded {
 </div>
   
   <h1>SnailFM</h1>
-  <button type="button" class="settings w3-button" data-toggle="modal" data-target="#myModal">Settings</button>
   <h4>Powered by <b>SnailDOS</b> team</h4>
 
   <p id="version"></p>
@@ -259,6 +269,7 @@ hr.rounded {
       Restart
     </button>
   </div>
+</div>
   <script>
     const { ipcRenderer } = require('electron');
     const version = document.getElementById('version');
@@ -312,7 +323,7 @@ var amogus = "https://www.youtube.com/watch?v=PHLIsIAhQtc"
 });
   </script>
                   <form action="">
-                    <h2>Pause/Play:</h2>
+                    <h2 class="noselect">Pause/Play:</h2>
                     <input type="button" id="4" class="w3-btn w3-black" value="PLAY"
                            onclick="toggle2();">
                     </form>
@@ -356,7 +367,7 @@ var amogus = "https://www.youtube.com/watch?v=PHLIsIAhQtc"
   }
   </script>
 
-<div class="modal fade" id="myModal" role="dialog">
+<div class="modal noselect fade" id="myModal" role="dialog">
   <div class="modal-dialog">
         <!-- Modal content-->
         <div class="modal-content">
@@ -368,8 +379,9 @@ var amogus = "https://www.youtube.com/watch?v=PHLIsIAhQtc"
             <h4>Please click what settings you want to change.</h4>
             <h4>If you don't want to change SnailFM settings, press the "More Settings" to change Account settings, encoder settings, and more.</h4>
             <span class="hiddentext" style="font-size:20px;cursor:pointer;color:red;display:none;" onclick="openNav()">&#9776; More settings</span>
-<hr class="rounded">
+            <hr class="rounded">
             <button onclick="window.location.reload();" class="w3-btn w3-black">Reload</button>
+            <hr class="rounded">
             <p></p>
               <a style="font-size:20px;cursor:pointer;color:red" href="reset.html">&#9776; ResetSnailFM</a>
 <h1 class="hiddentext">
