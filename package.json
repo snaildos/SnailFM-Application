@@ -10,6 +10,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "electron .",
+    "changelog": "gitmoji-changelog",
     "build": "electron-builder build --win --linux appimage --publish never",
     "snap": "electron-builder build --linux snap --publish never",
     "deploy": "electron-builder build --win --linux appimage --publish always"
@@ -18,7 +19,8 @@
   "license": "ISC",
   "devDependencies": {
     "electron": "13.2.1",
-    "electron-builder": "22.11.7"
+    "electron-builder": "22.11.7",
+    "gitmoji-changelog": "2.2.1"
   },
   "dependencies": {
     "axios": "0.21.1",

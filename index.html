@@ -344,7 +344,7 @@ var amogus = "https://www.youtube.com/watch?v=PHLIsIAhQtc"
     <p id='nowPlaying' class="nowplay">Fetching data...</p>
 <script>
    setInterval(()=>{
-    axios.get('http://api.snaildos.com/now/playing').then((value) => {
+    axios.get('http://api.snaildos.com/radio').then((value) => {
       document.getElementById('nowPlaying').innerText = value.data.playing || 'Nothing'
     })
   },5000);
