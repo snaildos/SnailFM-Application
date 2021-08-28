@@ -5,6 +5,8 @@
 
 ### Miscellaneous
 
+-  Bump Electron Version [[81c1952](https://github.com/snaildos/SnailFM-Application/commit/81c19523fe66c0fe37faebab0ae614f13d2e148c)]
+-  Small Changes [[889bb70](https://github.com/snaildos/SnailFM-Application/commit/889bb70ce933f39060713b5264136d20da0f3eb8)]
 -  Update .gitignore [[f5d3354](https://github.com/snaildos/SnailFM-Application/commit/f5d3354131cb9bb46d0a414b05950b0afb662885)]
 -  Update package-lock.json [[deda601](https://github.com/snaildos/SnailFM-Application/commit/deda601e6a0323e97ff97721a623a5037a14d2de)]
 -  Fix the CurrentPlying bug [[cdbc571](https://github.com/snaildos/SnailFM-Application/commit/cdbc5719654f5cded17fdef16c7d22275cc133f5)]
