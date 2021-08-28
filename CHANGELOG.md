@@ -1,5 +1,16 @@
 # Changelog
 
+<a name="2.1.0"></a>
+## 2.1.0 (2021-08-28)
+
+### Miscellaneous
+
+-  Update .gitignore [[f5d3354](https://github.com/snaildos/SnailFM-Application/commit/f5d3354131cb9bb46d0a414b05950b0afb662885)]
+-  Update package-lock.json [[deda601](https://github.com/snaildos/SnailFM-Application/commit/deda601e6a0323e97ff97721a623a5037a14d2de)]
+-  Fix the CurrentPlying bug [[cdbc571](https://github.com/snaildos/SnailFM-Application/commit/cdbc5719654f5cded17fdef16c7d22275cc133f5)]
+-  Add changelog! [[dbd943e](https://github.com/snaildos/SnailFM-Application/commit/dbd943e01167570aad67dbb14ed23445c0b1f0fb)]
+
+
 <a name="2.0.9"></a>
 ## 2.0.9 (2021-08-19)
 
