@@ -1,5 +1,16 @@
 # Changelog
 
+<a name="2.1.1"></a>
+## 2.1.1 (2021-08-30)
+
+### Miscellaneous
+
+-  Update package-lock.json [[c570109](https://github.com/snaildos/SnailFM-Application/commit/c5701095f9ba3ccddf26a9b60f1274d8c6b6bc8b)]
+-  Version Bump! [[835006e](https://github.com/snaildos/SnailFM-Application/commit/835006eeb2f40e82ba5f81e47f3c1238133c0198)]
+-  Add analytics [[b6786f7](https://github.com/snaildos/SnailFM-Application/commit/b6786f7f6b695edf5a391ea566976ec8052ec4c0)]
+-  Update README.md [[70ca258](https://github.com/snaildos/SnailFM-Application/commit/70ca258e742deca3604c97d537ddac82b2d0803f)]
+
+
 <a name="2.1.0"></a>
 ## 2.1.0 (2021-08-28)
 
