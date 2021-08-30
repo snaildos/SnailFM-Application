@@ -26,10 +26,13 @@
     "axios": "0.21.1",
     "bufferutil": "^4.0.3",
     "discord-rpc": "4.0.1",
+    "electron-store": "8.0.0",
     "electron-updater": "4.3.9",
     "internet-available": "1.0.0",
     "isdev": "1.0.1",
     "jquery": "3.6.0",
-    "utf-8-validate": "^5.0.4"
+    "utf-8-validate": "^5.0.4",
+    "uuidv4": "6.2.12",
+    "universal-analytics": "0.4.23"
   }
 }

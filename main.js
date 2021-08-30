@@ -2,6 +2,7 @@ const { autoUpdater } = require('electron-updater');
 const { SSL_OP_EPHEMERAL_RSA } = require('constants');
 const { app, BrowserWindow, ipcMain } = require('electron');
 const { watchFile } = require('fs');
+const { trackEvent } = require('./lib/analytics.js');
 // Notify
 const { Notification } = require('electron')
 
@@ -74,6 +75,7 @@ function createWindow () {
   mainWindow.webContents.on('did-finish-load', () => {
     if (loadingScreen) {
       loadingScreen.close();
+      trackEvent('stnailfm.started', 'SnailFM has just loaded up!');
     }
     var isDev = require('isdev')
 
