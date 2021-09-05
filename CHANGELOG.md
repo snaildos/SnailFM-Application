@@ -1,5 +1,20 @@
 # Changelog
 
+<a name="2.1.2"></a>
+## 2.1.2 (2021-09-05)
+
+### Miscellaneous
+
+-  Update package-lock.json [[eb773d8](https://github.com/snaildos/SnailFM-Application/commit/eb773d89458bebc2487657e5fd82ba26d2b758ac)]
+-  Merge branch &#x27;main&#x27; of https://github.com/snaildos/SnailFM-Application into main [[d98a583](https://github.com/snaildos/SnailFM-Application/commit/d98a5831a6a9d0c7b23a8925fd1ace8798744675)]
+-  Fix The Large Scaled DDOS effect as well and fixed YouTube bug [[cee04a8](https://github.com/snaildos/SnailFM-Application/commit/cee04a8bf1861614c152a13feeda6e0ab01902f6)]
+-  Merge pull request [#39](https://github.com/snaildos/SnailFM-Application/issues/39) from snaildos/renovate/electron-14.x [[44acf19](https://github.com/snaildos/SnailFM-Application/commit/44acf19bd48cf2c729c6ab78e4f3233a91a0e8a9)]
+-  Merge pull request [#38](https://github.com/snaildos/SnailFM-Application/issues/38) from snaildos/renovate/axios-0.x [[fa12971](https://github.com/snaildos/SnailFM-Application/commit/fa1297197dd79366a861e6fb20ab34934dc1f475)]
+-  Update main.js [[f4b1f5e](https://github.com/snaildos/SnailFM-Application/commit/f4b1f5e79a12c0639a62bd6602f0e39360b960c7)]
+-  Update dependency electron to v14 [[f560ced](https://github.com/snaildos/SnailFM-Application/commit/f560ced2a6df4d5fe814b7b1539d4e236e75efa1)]
+-  Update dependency axios to v0.21.3 [[bd001ea](https://github.com/snaildos/SnailFM-Application/commit/bd001eafbbac60103aecb44db1c3a9de17912c59)]
+
+
 <a name="2.1.1"></a>
 ## 2.1.1 (2021-08-30)
 
