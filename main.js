@@ -65,6 +65,7 @@ function createWindow () {
     icon: 'snailfm.ico',
     webPreferences: {
       nodeIntegration: true,
+      nativeWindowOpen: true,
       contextIsolation: false
     },
   });
