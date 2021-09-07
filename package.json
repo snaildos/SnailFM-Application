@@ -23,7 +23,7 @@
     "gitmoji-changelog": "2.2.1"
   },
   "dependencies": {
-    "axios": "0.21.3",
+    "axios": "0.21.4",
     "bufferutil": "^4.0.3",
     "discord-rpc": "4.0.1",
     "electron-store": "8.0.0",
