@@ -11,7 +11,6 @@ function neterr() {
     title: 'SnailFM',
     body: 'No valid network connection! Please reconnect!'
   }
-  new Notification(notification).show()
 }
 
 // wait function
@@ -98,6 +97,7 @@ internetAvailable({
     console.log("No internet");
     neterr()
     mainWindow.loadFile('nonet.html');
+    new Notification(notification).show()
 });
     mainWindow.show();
     console.log("Ok! Window init, let's check for updates...")
