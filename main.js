@@ -8,7 +8,7 @@ const { Notification } = require('electron')
 
 function neterr() {
   const notification = {
-    title: 'SnailPortal',
+    title: 'SnailFM',
     body: 'No valid network connection! Please reconnect!'
   }
   new Notification(notification).show()
