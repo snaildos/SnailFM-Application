@@ -1,5 +1,27 @@
 # Changelog
 
+<a name="2.1.3"></a>
+## 2.1.3 (2021-09-23)
+
+### Miscellaneous
+
+-  Update index.html [[74bbee8](https://github.com/snaildos/SnailFM-Application/commit/74bbee84005a29dc500a5b94168609fabaeffc28)]
+-  Update package-lock.json [[77d39e4](https://github.com/snaildos/SnailFM-Application/commit/77d39e428bbf421eb35cc4a81817cb3a900d77e5)]
+-  Merge pull request [#43](https://github.com/snaildos/SnailFM-Application/issues/43) from snaildos/renovate/electron-15.x [[60b33ee](https://github.com/snaildos/SnailFM-Application/commit/60b33ee42a6d5f602a74ac47e8a04feee083e1d7)]
+-  Basic LOCAL EN_US changes [[1fd0ecf](https://github.com/snaildos/SnailFM-Application/commit/1fd0ecf7212f494cb2a47fac0e944dbedd0d9415)]
+-  Fix OverFlow [[c3a7adb](https://github.com/snaildos/SnailFM-Application/commit/c3a7adb567d77c9f86aa95188acf40a845a7968e)]
+-  Fix EN_US language bug [[9dd9508](https://github.com/snaildos/SnailFM-Application/commit/9dd950827431f5f777c31dee8d6aca61ad997222)]
+-  Update dependency electron to v15 [[591831f](https://github.com/snaildos/SnailFM-Application/commit/591831f7614849e566aeafe15b80439cf0646508)]
+-  Update package-lock.json [[4caede9](https://github.com/snaildos/SnailFM-Application/commit/4caede95e223cb3dc9d18f58a3267a1d85844ba7)]
+-  Merge pull request [#42](https://github.com/snaildos/SnailFM-Application/issues/42) from snaildos/renovate/electron-store-8.x [[a817629](https://github.com/snaildos/SnailFM-Application/commit/a817629eda54490cbe7ddaa4cbbbc9d3d4f8b9bc)]
+-  Merge pull request [#41](https://github.com/snaildos/SnailFM-Application/issues/41) from snaildos/renovate/electron-14.x [[054834a](https://github.com/snaildos/SnailFM-Application/commit/054834a121259b1cfbfec47b87a5f5dfd42866e3)]
+-  Update dependency electron-store to v8.0.1 [[b56375c](https://github.com/snaildos/SnailFM-Application/commit/b56375c2185536d673b9ead2f5322d0c382aebac)]
+-  Update dependency electron to v14.0.1 [[a40bf92](https://github.com/snaildos/SnailFM-Application/commit/a40bf92e20d0a2ac679e0bd41929941c34720baa)]
+-  Merge pull request [#40](https://github.com/snaildos/SnailFM-Application/issues/40) from snaildos/renovate/axios-0.x [[e883226](https://github.com/snaildos/SnailFM-Application/commit/e883226fd64d6bee8e0f4c7626fa10540419a90c)]
+-  Update Video-JS functions &amp;&amp; Update Version [[688a1fa](https://github.com/snaildos/SnailFM-Application/commit/688a1fae198293d503d047a72b6367f3ce1a6081)]
+-  Update dependency axios to v0.21.4 [[3345e96](https://github.com/snaildos/SnailFM-Application/commit/3345e96cc8c9bfa44eb1c3c491dddf4d0f92bc0f)]
+
+
 <a name="2.1.2"></a>
 ## 2.1.2 (2021-09-05)
 
