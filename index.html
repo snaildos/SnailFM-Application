@@ -59,6 +59,22 @@ $('#cookie-ok').click(function(event){
     html, body {
   width: 100%;
   height:100%;
+  background-color: rgba(255,255,255,0.5);
+  opacity: 0.7;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 20px;
+  font-family: sans-serif;
+  background-color: #ffffff;
+  text-align: center;
 }
 
 .center { margin: 0 auto; width: 400px; }
@@ -80,15 +96,7 @@ h1  {
 }
 
 body {
-    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-    background-size: 400% 400%;
-    animation: gradient 15s ease infinite;
-    box-sizing: border-box;
-      margin: 0;
-      padding: 20px;
-      font-family: sans-serif;
-      background-color: #ffffff;
-      text-align: center;
+
 }
 
 @keyframes gradient {
@@ -161,6 +169,10 @@ hr.solid {
 hr.rounded {
   border-top: 8px solid #bbb;
   border-radius: 5px;
+}
+
+hr.roundedd {
+  border-top: 8px solid rgb(0, 0, 0);
 }
 
 /* The side navigation menu */
@@ -247,6 +259,7 @@ hr.rounded {
   </style>
 </head>
 <body>
+  <div class="content">
   <button type="button" class="settings w3-button w3-round-xlarge" data-toggle="modal" data-target="#myModal">Settings</button>
 <div class="noselect">
   <div id="cookie">
@@ -349,6 +362,16 @@ var amogus = "https://www.youtube.com/watch?v=vce-j1f6CVQ"
     })
   },7000);
 </script>
+<br>
+<br>
+<br>
+<div class="w3-center streamvolume">
+  <input class="vertical" type="range" name="rangeInput" class="fader" min="0" max="100" onchange="updateTextInput(this.value);" id="volu23"></input>
+  <input type="text" id="textInput" style="font-size:10px;" class="w3-black mixerdialogue w3-round-xlarge" value="Drag Slider!" readonly></input>
+  <br>
+  <b>(%) Music Volume</b>
+<p>
+</div>
 
 <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -365,6 +388,14 @@ var amogus = "https://www.youtube.com/watch?v=vce-j1f6CVQ"
     document.getElementById("mySidenav").style.width = "0";
     $('#myModal').modal('show');
   }
+
+  function updateTextInput(val) {
+          document.getElementById('textInput').value=val;
+          player.volume(val / 100)
+        }
+
+        player.volume(1)
+document.getElementById('volu23').value="100"
   </script>
 
 <div class="modal noselect fade" id="myModal" role="dialog">
@@ -387,5 +418,6 @@ var amogus = "https://www.youtube.com/watch?v=vce-j1f6CVQ"
 <h1 class="hiddentext">
 .
 </h1>
+</div>
 </body>
 </html>

@@ -3,6 +3,8 @@ const { SSL_OP_EPHEMERAL_RSA } = require('constants');
 const { app, BrowserWindow, ipcMain } = require('electron');
 const { watchFile } = require('fs');
 const { trackEvent } = require('./lib/analytics.js');
+const glasstron = require('glasstron');
+const electron = require('electron');
 // Notify
 const { Notification } = require('electron')
 
@@ -51,11 +53,13 @@ const createLoadingScreen = () => {
 };
 console.log("Loading screen ready.");
 
+electron.app.commandLine.appendSwitch("enable-transparent-visuals");
+
 // Start the main program
 let mainWindow;
 
 function createWindow () {
-  mainWindow = new BrowserWindow({
+  mainWindow = new glasstron.BrowserWindow({
     width: 800,
     height: 600,
     show: false,
@@ -68,6 +72,8 @@ function createWindow () {
       contextIsolation: false
     },
   });
+  mainWindow.blurType = "acrylic";
+  mainWindow.setBlur(true);
   mainWindow.setMenuBarVisibility(false)
   mainWindow.setResizable(false)
   mainWindow.loadFile('index.html');
