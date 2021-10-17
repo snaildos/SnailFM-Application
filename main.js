@@ -28,6 +28,22 @@ function wait(ms)
 require('./lib/rpc.js');
 console.log("RPC lib init.");
 
+// Blur Service
+if (process.platform == 'darwin') { 
+  app.whenReady().then(() => { // macOS
+    global.blurType = "vibrancy";
+    global.windowFrame = 'false'
+})}
+else if(process.platform == 'win32'){ 
+  app.whenReady().then(() => { // Windows
+    global.blurType = "acrylic";
+    global.windowFrame = 'false' // The effect won't work properly if the frame is enabled on Windows
+})}
+else{ 
+  app.whenReady().then(() => { // Linux
+    global.blurType = "blurbehind";
+    global.windowFrame = 'true'
+})}
 
 // Loading screen
 /// create a global var, wich will keep a reference to out loadingScreen window
@@ -63,7 +79,11 @@ function createWindow () {
     width: 800,
     height: 600,
     show: false,
+    titlebarStyle: 'hiddenInset',
     fullscreen: false,
+    transparent: true,
+    blur: true,
+    blurType: global.blurType,
     modal: true,
     icon: 'snailfm.ico',
     webPreferences: {
@@ -72,8 +92,6 @@ function createWindow () {
       contextIsolation: false
     },
   });
-  mainWindow.blurType = "acrylic";
-  mainWindow.setBlur(true);
   mainWindow.setMenuBarVisibility(false)
   mainWindow.setResizable(false)
   mainWindow.loadFile('index.html');
