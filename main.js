@@ -81,7 +81,6 @@ function createWindow () {
     show: false,
     titlebarStyle: 'hiddenInset',
     fullscreen: false,
-    transparent: true,
     blur: true,
     blurType: global.blurType,
     modal: true,
