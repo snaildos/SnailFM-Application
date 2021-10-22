@@ -1,5 +1,25 @@
 <!DOCTYPE html>
 <head>
+  <link rel="stylesheet" href="./titlebar.css"> 
+  <script>
+    (function() {
+var htmlElement = document.documentElement;
+    if (navigator.platform.match(/(Mac|MacIntel)/i)) {
+        htmlElement.className = 'mac';
+    } else if (navigator.platform.match(/(Windows|Win32|Win64)/i)) {
+        htmlElement.className = 'windows';
+    } else if (navigator.platform.match(/(Linux)/i)) {
+        htmlElement.className = 'linux';
+    }
+    document.addEventListener('click', function(event) {
+        var target = event.target;
+        if (target.getAttribute && target.getAttribute('data-action') === 'switch-os') {
+        event.preventDefault();
+        htmlElement.className = target.getAttribute('data-os')
+        }
+    })
+})();
+  </script>
   <script>
     window.jQuery = window.$ = require('jquery');
     const axios = require('axios')
@@ -264,6 +284,14 @@ hr.roundedd {
         }
   </style>
 </head>
+  <header data-for-os="windows" id="titlebar" class="titlebar">
+    <div id="window-controls">
+      <div onclick="window.api.send('minimize')" class="button" id="min-button"><img class="icon" srcset="./icons/titlebar/min-w-10.png 1x, ./icons/titlebar/min-w-12.png 1.25x, ./icons/titlebar/min-w-15.png 1.5x, ./icons/titlebar/min-w-15.png 1.75x, ./icons/titlebar/min-w-20.png 2x, ./icons/titlebar/min-w-20.png 2.25x, ./icons/titlebar/min-w-24.png 2.5x, ./icons/titlebar/min-w-30.png 3x, ./icons/titlebar/min-w-30.png 3.5x" draggable="false" /></div>
+      <div onclick="window.api.send('maximize')" class="button" id="max-button"><img class="icon" srcset="./icons/titlebar/max-w-10.png 1x, ./icons/titlebar/max-w-12.png 1.25x, ./icons/titlebar/max-w-15.png 1.5x, ./icons/titlebar/max-w-15.png 1.75x, ./icons/titlebar/max-w-20.png 2x, ./icons/titlebar/max-w-20.png 2.25x, ./icons/titlebar/max-w-24.png 2.5x, ./icons/titlebar/max-w-30.png 3x, ./icons/titlebar/max-w-30.png 3.5x" draggable="false" /></div>
+      <div onclick="window.api.send('restore')" class="button" id="restore-button"><img class="icon" srcset="./icons/titlebar/restore-w-10.png 1x, ./icons/titlebar/restore-w-12.png 1.25x, ./icons/titlebar/restore-w-15.png 1.5x, ./icons/titlebar/restore-w-15.png 1.75x, ./icons/titlebar/restore-w-20.png 2x, ./icons/titlebar/restore-w-20.png 2.25x, ./icons/titlebar/restore-w-24.png 2.5x, ./icons/titlebar/restore-w-30.png 3x, ./icons/titlebar/restore-w-30.png 3.5x" draggable="false" /></div>
+      <div onclick="window.api.send('close')" class="button" id="close-button"><img class="icon" srcset="./icons/titlebar/close-w-10.png 1x, ./icons/titlebar/close-w-12.png 1.25x, ./icons/titlebar/close-w-15.png 1.5x, ./icons/titlebar/close-w-15.png 1.75x, ./icons/titlebar/close-w-20.png 2x, ./icons/titlebar/close-w-20.png 2.25x, ./icons/titlebar/close-w-24.png 2.5x, ./icons/titlebar/close-w-30.png 3x, ./icons/titlebar/close-w-30.png 3.5x" draggable="false" /></div>
+    </div>
+  </header>
 <body>
   <div class="content">
   <button type="button" class="settings w3-button w3-round-xlarge" data-toggle="modal" data-target="#myModal">Settings</button>
