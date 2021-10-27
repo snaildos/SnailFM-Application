@@ -1,5 +1,41 @@
 # Changelog
 
+<a name="2.1.4"></a>
+## 2.1.4 (2021-10-27)
+
+### Miscellaneous
+
+-  Merge branch &#x27;main&#x27; of https://github.com/snaildos/SnailFM-Application [[99266d7](https://github.com/snaildos/SnailFM-Application/commit/99266d71624657d1696228f4a9b26f681543c807)]
+-  Add the TaskBar [[e7a4aae](https://github.com/snaildos/SnailFM-Application/commit/e7a4aaea968bd46630d686a01d078533b07f7a28)]
+-  Merge pull request [#52](https://github.com/snaildos/SnailFM-Application/issues/52) from snaildos/renovate/axios-0.x [[071eafe](https://github.com/snaildos/SnailFM-Application/commit/071eafe923e4cf498db6298dff04807cbdacb272)]
+-  Merge pull request [#51](https://github.com/snaildos/SnailFM-Application/issues/51) from snaildos/restyled/pull-50 [[acdd04d](https://github.com/snaildos/SnailFM-Application/commit/acdd04d47908a75e00cba3a94d82ea05a5372c9d)]
+-  Merge branch &#x27;main&#x27; into restyled/pull-50 [[46f0a21](https://github.com/snaildos/SnailFM-Application/commit/46f0a21635b185541811718d03861490f30cebe9)]
+-  SnailFM transparency [[2f16327](https://github.com/snaildos/SnailFM-Application/commit/2f16327eab6bb1488d183d0a914955ec1723569a)]
+-  Update dependency axios to v0.24.0 [[9d9283f](https://github.com/snaildos/SnailFM-Application/commit/9d9283f7904b629fa28910a0397af64aa0c60089)]
+-  Restyled by whitespace [[d9d58f6](https://github.com/snaildos/SnailFM-Application/commit/d9d58f62ed6749c7da8513e22526a5f8c843cfa0)]
+-  Restyled by prettier [[86502e2](https://github.com/snaildos/SnailFM-Application/commit/86502e255eeef2fc1af39aec23d29cc7ab189b44)]
+-  Restyled by clang-format [[d5a5718](https://github.com/snaildos/SnailFM-Application/commit/d5a57184d27e6130503f14a6b92363fddb1e22e7)]
+-  Merge branch &#x27;snaildos:main&#x27; into main [[76ce7f3](https://github.com/snaildos/SnailFM-Application/commit/76ce7f362d4e19eacdd4eec1280bd7f07948d33b)]
+-  Add files via upload [[b27378c](https://github.com/snaildos/SnailFM-Application/commit/b27378c2e3684548deeb7a36136c17b9234aaf55)]
+-  Create titlebar.css [[c5fd660](https://github.com/snaildos/SnailFM-Application/commit/c5fd660dec79d632ec7910c5d76983aae507ef80)]
+-  Update index.html [[3131753](https://github.com/snaildos/SnailFM-Application/commit/31317537adcbcfb240bd81e7ffb6292abda6d457)]
+-  Update main.js [[fda2680](https://github.com/snaildos/SnailFM-Application/commit/fda2680f72419c6c8f3c3fa195ed4e3e4bec69c1)]
+-  Merge pull request [#49](https://github.com/snaildos/SnailFM-Application/issues/49) from snaildos/renovate/electron-15.x [[6fd66d5](https://github.com/snaildos/SnailFM-Application/commit/6fd66d5771b95cc984055056299c2188a381624c)]
+-  Update dependency electron to v15.3.0 [[4edbf3a](https://github.com/snaildos/SnailFM-Application/commit/4edbf3a26a6b4ff8e124d43a70b2b9ed6e322e5c)]
+-  Merge pull request [#47](https://github.com/snaildos/SnailFM-Application/issues/47) from KorbsStudio/patch-1 [[3310735](https://github.com/snaildos/SnailFM-Application/commit/331073571605e96fe1bbd31f68e189e7531a0589)]
+-  Update transparency for SnailFM! [[499c327](https://github.com/snaildos/SnailFM-Application/commit/499c327e23d40eeedca59c1a5de4c3c12b9add29)]
+-  Allow snap to work on Windows [[cbc90bc](https://github.com/snaildos/SnailFM-Application/commit/cbc90bc916ef7da4918b4c31b9d1e21f84397cad)]
+-  Add opacity AND a volume bar! [[69eadd0](https://github.com/snaildos/SnailFM-Application/commit/69eadd09cb4654aaf10b9ce0286e9ccfc7b0d6d7)]
+-  Merge pull request [#45](https://github.com/snaildos/SnailFM-Application/issues/45) from snaildos/renovate/electron-15.x [[c6acc11](https://github.com/snaildos/SnailFM-Application/commit/c6acc11bbc86dcaa7c38e3147cea32f7245a3a35)]
+-  Merge pull request [#46](https://github.com/snaildos/SnailFM-Application/issues/46) from snaildos/renovate/electron-builder-22.x [[219331a](https://github.com/snaildos/SnailFM-Application/commit/219331a508ca4eb73080fab6a99433e5b95737c7)]
+-  Merge pull request [#44](https://github.com/snaildos/SnailFM-Application/issues/44) from snaildos/renovate/axios-0.x [[d5e4f73](https://github.com/snaildos/SnailFM-Application/commit/d5e4f73b5710069dfb7257316f92c5beffe626c7)]
+-  Delete package-lock.json [[5a8fcc8](https://github.com/snaildos/SnailFM-Application/commit/5a8fcc82fa806767f1f0c42a3605e1b93973b08f)]
+-  Update Package Version [[1151dbf](https://github.com/snaildos/SnailFM-Application/commit/1151dbf309d65896c2795dde2acb5babd700b4df)]
+-  Update dependency electron to v15.2.0 [[4308ca7](https://github.com/snaildos/SnailFM-Application/commit/4308ca7c8b71f19e6e88c3878cee0f9981cb59ff)]
+-  Update dependency electron-builder to v22.13.1 [[e2eff4b](https://github.com/snaildos/SnailFM-Application/commit/e2eff4bf7965ba72fa282e8986ee48312c19eacb)]
+-  Update dependency axios to v0.23.0 [[5ed6cc5](https://github.com/snaildos/SnailFM-Application/commit/5ed6cc53bea1a0cb060a2674a72e85236b201da9)]
+
+
 <a name="2.1.3"></a>
 ## 2.1.3 (2021-09-23)
 
