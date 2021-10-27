@@ -7,6 +7,7 @@ const glasstron = require("glasstron");
 const electron = require("electron");
 // Notify
 const { Notification } = require("electron");
+electron.app.commandLine.appendSwitch("enable-transparent-visuals");
 
 function neterr() {
   const notification = {
@@ -74,7 +75,8 @@ const createLoadingScreen = () => {
 };
 console.log("Loading screen ready.");
 
-electron.app.commandLine.appendSwitch("enable-transparent-visuals");
+// Convert boolean to string
+var windowframz = (global.windowFrame === 'true');
 
 // Start the main program
 let mainWindow;
@@ -85,7 +87,8 @@ function createWindow() {
     height: 600,
     show: false,
     titlebarStyle: "hiddenInset",
-    frame: global.windowFrame,
+    frame: windowframz,
+    titlebarStyle: 'hiddenInset',
     fullscreen: false,
     blur: true,
     blurType: global.blurType,
