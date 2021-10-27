@@ -44,11 +44,9 @@ if (process.platform == "darwin") {
     // is enabled on Windows
   });
 } else {
-  app.whenReady().then(() => {
     // Linux
     global.blurType = "blurbehind";
     global.windowFrame = "true";
-  });
 }
 
 // Loading screen
