@@ -180,3 +180,8 @@ ipcMain.on("relaunch", () => {
 ipcMain.on("restart_app", () => {
   autoUpdater.quitAndInstall();
 });
+
+ipcMain.on('minimize', () => {mainWindow.minimize()})
+ipcMain.on('maximize', () => {mainWindow.maximize()})
+ipcMain.on('restore', () => {mainWindow.restore()})
+ipcMain.on('close', () => {mainWindow.close()})

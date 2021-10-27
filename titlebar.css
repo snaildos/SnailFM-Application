@@ -15,11 +15,6 @@ html.windows .settings {top: 50px}
   z-index: 1;
 }
 
-.maximized #titlebar {
-  width: 100%;
-  padding: 0;
-}
-
 #window-title span {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -83,23 +78,11 @@ html.windows .settings {top: 50px}
 }
 
 #min-button {
-  grid-column: 1;
+  grid-column: 2;
 }
 #max-button, #restore-button {
   grid-column: 2;
 }
 #close-button {
   grid-column: 3;
-}
-
-#restore-button {
-  display: none !important;
-}
-
-.maximized #restore-button {
-  display: flex !important;
-}
-
-.maximized #max-button {
-  display: none;
 }
