@@ -62,6 +62,11 @@ const createLoadingScreen = () => {
       fullscreen: false,
       show: true,
       transparent: true,
+      webPreferences: {
+        sandbox: true,
+        nodeIntergration: false,
+        contextIsolation: true
+      }
     })
   );
   loadingScreen.setResizable(false);

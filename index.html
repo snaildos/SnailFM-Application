@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <head>
   <link rel="stylesheet" href="./titlebar.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Zen+Antique+Soft&display=swap');
+    </style>
   <script>
     (function() {
 var htmlElement = document.documentElement;
@@ -121,8 +124,8 @@ h1  {
     }
 }
 
-body {
-
+p,h1,h2,h3,h4,h5,div {
+  font-family: 'Zen Antique Soft', serif;
 }
 
 @keyframes gradient {
@@ -397,7 +400,7 @@ var amogus = "https://www.youtube.com/watch?v=vce-j1f6CVQ"
 <br>
 <br>
 <br>
-<div class="w3-center streamvolume">
+<div class="w3-center streamvolume noselect">
   <input class="vertical" type="range" name="rangeInput" class="fader" min="0" max="100" onchange="updateTextInput(this.value);" id="volu23"></input>
   <input type="text" id="textInput" style="font-size:10px;" class="w3-black mixerdialogue w3-round-xlarge" value="Drag Slider!" readonly></input>
   <br>
