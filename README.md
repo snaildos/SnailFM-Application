@@ -1,4 +1,5 @@
 # SnailFM
+[![Snap](https://snapcraft.io/streambop/badge.svg)](https://snapcraft.io/streambop)
 SnailFM is a radio station by the SnailDOS community.
 You can easily tune into SnailFM with this software.
 SnailFM is a online radiostation, with no copyright music. It has no lyrics, so it's great for background music, or just studying or even coding!
@@ -18,3 +19,13 @@ then building can be:
 
 # Contributing
 Feel free to contribute! Fork, commit, PR!
+
+# StreamBop
+Stream bop is a OBS utility and allows music to play automatically without you worrying about music.
+
+```
+snap install streambop
+```
+
+
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fsnaildos%2FSnailFM-Application.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fsnaildos%2FSnailFM-application?ref=badge_large)
