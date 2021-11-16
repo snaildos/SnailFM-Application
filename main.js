@@ -5,16 +5,10 @@ const { watchFile } = require("fs");
 const { trackEvent } = require("./lib/analytics.js");
 const glasstron = require("glasstron");
 const electron = require("electron");
+const isOnline = require('is-online');
 // Notify
 const { Notification } = require("electron");
 electron.app.commandLine.appendSwitch("enable-transparent-visuals");
-
-function neterr() {
-  const notification = {
-    title: "SnailFM",
-    body: "No valid network connection! Please reconnect!",
-  };
-}
 
 // wait function
 function wait(ms) {
@@ -120,22 +114,19 @@ function createWindow() {
       console.log("Not in Development!");
     }
 
-    var internetAvailable = require("internet-available");
 
-    // Set a timeout and a limit of attempts to check for connection
-    internetAvailable({
-      timeout: 2000,
-      retries: 3,
-    })
-      .then(function () {
-        console.log("Internet available");
-      })
-      .catch(function () {
+    (async () => {
+      if ((await isOnline() === false)) {
         console.log("No internet");
-        neterr();
-        mainWindow.loadFile("nonet.html");
-        new Notification(notification).show();
-      });
+        const notification3 = {
+          title: "SnailFM",
+          body: "No valid network connection! Please reconnect!",
+        };        
+      mainWindow.loadFile("nonet.html");
+      new Notification(notification3).show();
+      }
+    })();
+    
     mainWindow.show();
     console.log("Ok! Window init, let's check for updates...");
     autoUpdater.checkForUpdatesAndNotify();

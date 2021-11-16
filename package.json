@@ -29,7 +29,7 @@
     "electron-store": "8.0.1",
     "electron-updater": "4.3.9",
     "glasstron": "0.1.1",
-    "internet-available": "1.0.0",
+    "is-online": "9.0.1",
     "isdev": "1.0.1",
     "jquery": "3.6.0",
     "universal-analytics": "0.4.23",
