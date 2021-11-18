@@ -42,6 +42,8 @@ body {
 		console.log("Update true. Setting now.")
 		localStorage.setItem('version', '2.0.8');
 		// import rest of stuff here
+		store.set('setup', true)
+		store.set('logged_in', false)
 	</script>
 	<div class="bs-example">
 		<h2>Updating SnailFM libs...</h2>

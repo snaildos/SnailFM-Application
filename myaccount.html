@@ -1,24 +1,79 @@
 <!DOCTYPE html>
 <html>
+  <link rel="stylesheet" href="https://cdn.snaildos.com/w3.css">
 <head>
     <style>
         .error  {
             color: red;
         }
     </style>
+    <script>
+        const { ipcRenderer } = require('electron');
+    </script>
     <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <header data-for-os="windows" id="titlebar" class="titlebar">
+    <div id="window-controls">
+      <div onclick="ipcRenderer.send('minimize')" class="button" id="min-button"><img class="icon" srcset="./icons/titlebar/min-w-10.png 1x, ./icons/titlebar/min-w-12.png 1.25x, ./icons/titlebar/min-w-15.png 1.5x, ./icons/titlebar/min-w-15.png 1.75x, ./icons/titlebar/min-w-20.png 2x, ./icons/titlebar/min-w-20.png 2.25x, ./icons/titlebar/min-w-24.png 2.5x, ./icons/titlebar/min-w-30.png 3x, ./icons/titlebar/min-w-30.png 3.5x" draggable="false" /></div>
+      <div onclick="ipcRenderer.send('close')" class="button" id="close-button"><img class="icon" srcset="./icons/titlebar/close-w-10.png 1x, ./icons/titlebar/close-w-12.png 1.25x, ./icons/titlebar/close-w-15.png 1.5x, ./icons/titlebar/close-w-15.png 1.75x, ./icons/titlebar/close-w-20.png 2x, ./icons/titlebar/close-w-20.png 2.25x, ./icons/titlebar/close-w-24.png 2.5x, ./icons/titlebar/close-w-30.png 3x, ./icons/titlebar/close-w-30.png 3.5x" draggable="false" /></div>
+    </div>
+  </header>
+    <link rel="stylesheet" href="./titlebar.css">
     <title>SnailFM: My Account</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='main.js'></script>
+    <h1 class="w3-center namerr">Hello, <p id="name">Loading...</p></h1>
 </head>
 <body>
-    <h1>SnailFM</h1>
-    <h2>My account:</h2>
-    <h3>You are currently: <h4 class=error>Not Logged In.</h4></h3>
-    <p>
-        <h1> MY ACCOUNTS DOES NOT FUNCTION, AS THE API IS NOT WRITTEN YET. PLEASE RESTART THIS APP TOO RETURN TOO THE NORMAL APP.</h1>
-    </p>
+    <header data-for-os="windows" id="titlebar" class="titlebar">
+        <div id="window-controls">
+          <div onclick="ipcRenderer.send('minimize')" class="button" id="min-button"><img class="icon" srcset="./icons/titlebar/min-w-10.png 1x, ./icons/titlebar/min-w-12.png 1.25x, ./icons/titlebar/min-w-15.png 1.5x, ./icons/titlebar/min-w-15.png 1.75x, ./icons/titlebar/min-w-20.png 2x, ./icons/titlebar/min-w-20.png 2.25x, ./icons/titlebar/min-w-24.png 2.5x, ./icons/titlebar/min-w-30.png 3x, ./icons/titlebar/min-w-30.png 3.5x" draggable="false" /></div>
+          <div onclick="ipcRenderer.send('close')" class="button" id="close-button"><img class="icon" srcset="./icons/titlebar/close-w-10.png 1x, ./icons/titlebar/close-w-12.png 1.25x, ./icons/titlebar/close-w-15.png 1.5x, ./icons/titlebar/close-w-15.png 1.75x, ./icons/titlebar/close-w-20.png 2x, ./icons/titlebar/close-w-20.png 2.25x, ./icons/titlebar/close-w-24.png 2.5x, ./icons/titlebar/close-w-30.png 3x, ./icons/titlebar/close-w-30.png 3.5x" draggable="false" /></div>
+        </div>
+      </header>
+      <br>
+<button class="w3-black w3-roundx w3-button w3-center loginbutton" onclick="ipcRenderer.send('login_show'); ipcRenderer.send('main_hide');">Login</button>
+<button class="w3-black w3-roundx w3-button w3-center" onclick="window.location.href = 'index.html'">Exit</button>
+<button class="w3-black w3-roundx w3-button w3-center logoutbutton" onclick="store.set('token', null); store.set('logged_in', false); location.reload();">Logout</button>
 </body>
+<script>
+  window.jQuery = window.$ = require('jquery');
+  const axios = require('axios');
+  const Store = require('electron-store');
+  const store = new Store();
+  token = store.get('token')
+  async function name() {
+await axios.get('https://api.snaildos.com/users/@me', {
+headers: {
+Authorization: token
+}}
+)
+.then(function (response) {
+  // handle success
+  document.getElementById("name").innerHTML = ( response.data.user.name );
+  $(".loginbutton").hide();
+  $(".logoutbutton").show();
+})
+.catch(function (error) {
+  // handle error
+  alert(error);
+})
+.then(function () {
+});
+}
+if (token == undefined) {
+  console.log("Not doing anything since token is undefined.");
+  $(".namerr").hide()
+  $(".logoutbutton").hide()
+} else {
+  if (store.get('logged_in') == true) {
+  name()
+} else {
+  $(".namerr").hide()
+  $(".logoutbutton").hide()
+}
+}
+if ((store.get('logged_in') == false)) {
+  $(".logoutbutton").hide()
+}
+
+  </script>
 </html>
