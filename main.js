@@ -155,6 +155,7 @@ function createloginWindow() {
     minWidth: 800,
     minHeight: 400,
     center: true,
+    hide: true,
     webPreferences: {
       nodeIntegration: true,
       contextIsolation: false,
@@ -178,8 +179,6 @@ function createloginWindow() {
     }
   
   });
-
-  loginWindow.hide()
   loginWindow.setMenuBarVisibility(false) 
   ipcMain.on('login_sar', () => {loginWindow.show(); loginWindow.loadURL("https://login.snaildos.com?redir=snailfm://login"); loginWindow.maximize(); ipcMain.emit('main_hide')})
   ipcMain.on('login_show', () => {loginWindow.show(); loginWindow.maximize(); loginWindow.restore()})
