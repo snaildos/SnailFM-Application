@@ -218,6 +218,7 @@ app.whenReady().then(() => {
           console.log(error);
           ipcMain.emit("login_sar")
           console.log("Token failure!")
+          createWindow()
           loadingScreen.close();
         })
         .then(function () {
