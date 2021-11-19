@@ -296,7 +296,7 @@ autoUpdater.on("update-downloaded", () => {
 });
 
 ipcMain.on("relaunch", () => {
-  mainWindow.close();
+  ipcMain.emit("close")
 });
 
 ipcMain.on("restart_app", () => {

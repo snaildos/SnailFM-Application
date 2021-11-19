@@ -35,9 +35,13 @@ body {
 </head>
 <body>
 	<script>
+		const Store = require('electron-store');
+  		const store = new Store();
 		console.log("Let's clear localstorage first...")
 		localStorage.removeItem('cookie-consent', 'true');
 		console.log("Just wait a bit...")
+		config.set('logged_in', false)
+		config.set('token', null)
 		localStorage.setItem('version', '0.0.0.0');
 		// import rest of stuff here
 	</script>
