@@ -155,12 +155,12 @@ function createloginWindow() {
     minWidth: 800,
     minHeight: 400,
     center: true,
-    hide: true,
     webPreferences: {
       nodeIntegration: true,
       contextIsolation: false,
   }
   }));
+  loginWindow.hide()
   loginWindow.on('close', function (event) {
     event.preventDefault();
     const notification4 = {
