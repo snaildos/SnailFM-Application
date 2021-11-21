@@ -6,6 +6,9 @@
         .error  {
             color: red;
         }
+        h1,h2,h3,h4,p,div {
+          color: white;
+        }
     </style>
     <script>
         const { ipcRenderer } = require('electron');
@@ -30,9 +33,11 @@
         </div>
       </header>
       <br>
+      <div class="w3-center">
 <button class="w3-black w3-roundx w3-button w3-center loginbutton" onclick="ipcRenderer.send('login_show'); ipcRenderer.send('main_hide');">Login</button>
 <button class="w3-black w3-roundx w3-button w3-center" onclick="window.location.href = 'index.html'">Exit</button>
 <button class="w3-black w3-roundx w3-button w3-center logoutbutton" onclick="store.set('token', null); store.set('logged_in', false); location.reload();">Logout</button>
+</div>
 </body>
 <script>
   window.jQuery = window.$ = require('jquery');

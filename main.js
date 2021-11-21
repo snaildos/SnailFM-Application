@@ -254,6 +254,7 @@ app.whenReady().then(() => {
       ipcMain.emit('load_acc');
       ipcMain.emit('login_hide')
       ipcMain.emit('main_show')
+      store.set('logged_in', true)
       if ((store.get('createonlogin')) === true) {
         createWindow()
         store.set('createonlogin', false);
