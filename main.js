@@ -10,6 +10,7 @@ const Store = require("electron-store");
 const store = new Store();
 const axios = require('axios');
 token = store.get('token')
+store.set('createonlogin', false)
 // Notify
 const { Notification } = require("electron");
 electron.app.commandLine.appendSwitch("enable-transparent-visuals");
@@ -141,7 +142,7 @@ function createWindow() {
   });
 
   mainWindow.on("closed", function () {
-    mainWindow = null;
+    ipcMain.emit('login_exit');
   });
 }
 
@@ -155,10 +156,11 @@ function createloginWindow() {
     minWidth: 800,
     minHeight: 400,
     center: true,
+    show: false,
     webPreferences: {
       nodeIntegration: true,
       contextIsolation: false,
-  }
+    }
   }));
   loginWindow.hide()
   loginWindow.on('close', function (event) {
@@ -207,6 +209,7 @@ app.whenReady().then(() => {
             console.log("Token failure!")
             ipcMain.emit("login_sar")
             loadingScreen.close();
+            store.set('createonlogin', true)
           } else {
             console.log("Sucess!")
             createWindow();
@@ -217,8 +220,8 @@ app.whenReady().then(() => {
           console.log(error);
           ipcMain.emit("login_sar")
           console.log("Token failure!")
-          createWindow()
           loadingScreen.close();
+          store.set('createonlogin', true)
         })
         .then(function () {
         });
@@ -251,7 +254,10 @@ app.whenReady().then(() => {
       ipcMain.emit('load_acc');
       ipcMain.emit('login_hide')
       ipcMain.emit('main_show')
-      store.set('logged_in', true);
+      if ((store.get('createonlogin')) === true) {
+        createWindow()
+        store.set('createonlogin', false);
+      }
   })
   app.on("open-url", (event, url) => {
     const url2 = req.url.substr(22)
@@ -262,6 +268,10 @@ app.whenReady().then(() => {
     ipcMain.emit('login_hide')
     ipcMain.emit('main_show')
     store.set('logged_in', true);
+    if ((store.get('createonlogin')) === true) {
+      createWindow()
+      store.set('createonlogin', false);
+    }
   });
 });
 
@@ -306,4 +316,4 @@ ipcMain.on('appquit', () => {app.exit()})
 ipcMain.on('minimize', () => {mainWindow.minimize()})
 ipcMain.on('maximize', () => {mainWindow.maximize()})
 ipcMain.on('restore', () => {mainWindow.restore()})
-ipcMain.on('close', () => {mainWindow.close(); ipcMain.emit('login_exit')})
+ipcMain.on('close', () => {mainWindow.close(); ipcMain.emit('login_exit');})
