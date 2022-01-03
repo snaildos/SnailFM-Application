@@ -358,16 +358,20 @@ hr.roundedd {
     class="hidden"
     width="0" height="0"
     poster="play.png"
-    data-setup='{ "techOrder": ["youtube"], "sources": [{ "type": "video/youtube", "src": "https://www.youtube.com/watch?v=9S42Sbvim-M"}] }'
-  >
+    data-setup='{ "techOrder": ["youtube"], "sources": [{ "type": "video/youtube", "src": "https://www.youtube.com/watch?v=PfK213zXvvU"}] }'
+  >  
   </video>
   <script>
-var amogus = "https://www.youtube.com/watch?v=9S42Sbvim-M"
-    videojs("vid1", {
-    controlBar: {
-      fullscreenToggle: false
-    }
-});
+    async function init() {
+        axios.get('http://api.snaildos.com/radio').then((value) => {
+      store.set('url', value.data.url)
+      var url = store.get("url")
+player.src({ type: 'video/youtube', src: url });
+player.load()
+player.play()
+$("#4").show()
+})}
+init()
   </script>
                   <form action="">
                     <h2 class="noselect">Pause/Play:</h2>
@@ -409,6 +413,7 @@ var amogus = "https://www.youtube.com/watch?v=9S42Sbvim-M"
     })
  },4000);
 }
+$("#4").hide()
 </script>
 <br>
 <br>
