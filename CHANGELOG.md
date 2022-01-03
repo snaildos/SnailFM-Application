@@ -1,10 +1,17 @@
 # Changelog
 
 <a name="2.1.4"></a>
-## 2.1.4 (2021-12-11)
+## 2.1.4 (2022-01-03)
 
 ### Miscellaneous
 
+-  SnailFM doesn&#x27;t rely on updates to update youtube stream url. [[920c163](https://github.com/snaildos/SnailFM-Application/commit/920c163900967aa1267fd9e03f2404078d9d2772)]
+-  Fix some bugs [[0cb0d96](https://github.com/snaildos/SnailFM-Application/commit/0cb0d96722742a5777fa93fcb5b0088bf2971412)]
+-  Update index.html [[efb778d](https://github.com/snaildos/SnailFM-Application/commit/efb778d8d1b534249e1c291510764073b8dba7df)]
+-  Merge pull request [#64](https://github.com/snaildos/SnailFM-Application/issues/64) from snaildos/renovate/electron-16.x [[7366a71](https://github.com/snaildos/SnailFM-Application/commit/7366a714eb81cfd3070021c3e9f40cc074ef44b3)]
+-  Update dependency electron to v16.0.5 [[18b92af](https://github.com/snaildos/SnailFM-Application/commit/18b92afa6f8687cd3a06747958c9496b9bc199ac)]
+-  Change Font [[0c4a6ee](https://github.com/snaildos/SnailFM-Application/commit/0c4a6ee8fea55106165aeddda3f7aff820de13ce)]
+-  Update CHANGELOG.md [[213aa4e](https://github.com/snaildos/SnailFM-Application/commit/213aa4e020f9d71082861e9d437b97b5e6494243)]
 -  Update video-js [[687733c](https://github.com/snaildos/SnailFM-Application/commit/687733c2d4e983d1c302fa6f8c469e282d97ef06)]
 -  Merge pull request [#63](https://github.com/snaildos/SnailFM-Application/issues/63) from snaildos/renovate/electron-16.x [[ca179af](https://github.com/snaildos/SnailFM-Application/commit/ca179afb1f726c711b08b2e7809be05ab509b660)]
 -  Update dependency electron to v16.0.4 [[58b0860](https://github.com/snaildos/SnailFM-Application/commit/58b0860cddc564d3053287bd96163c078fd743ee)]
