@@ -29,7 +29,7 @@ var htmlElement = document.documentElement;
 </script>
     <script>
     // Needs window render
-    require('./renderer.js')
+    require('./src/js/renderer.js')
   </script>
 <script>
   // update check
@@ -40,7 +40,7 @@ var version = localStorage.getItem('version');
 
 if(version != '2.0.9'){
   console.log('Latest update is not ready.')
-  window.location.href = "update.html";
+  window.location.href = "./src/pages/update.html";
 }
 
 });
@@ -69,16 +69,15 @@ $('#cookie-ok').click(function(event){
 </script>
 </script>
 <script src="./lib/confetti.min.js"></script>
-  <link rel="icon" href="snailfm.png">
-  <script src="./YoutubeJS/video.js"></script>
-  <link href="./YoutubeJS/video-js.css" rel="stylesheet">
-  <script src="./YoutubeJS/Youtube.js"></script>
+  <link rel="icon" href="./src/icon/snailfm.png">
+  <script src="./src/YoutubeJS/video.js"></script>
+  <link href="./src/YoutubeJS/video-js.css" rel="stylesheet">
+  <script src="./src/YoutubeJS/Youtube.js"></script>
   <link rel="stylesheet" href="https://cdn.snaildos.com/w3.css">
   <link rel="stylesheet" href="https://cdn.snaildos.com/bootstrap.min.css">
   <script src="https://cdn.snaildos.com/bootstrap.min.js"></script>
   <title>SnailFM</title>
   <style>
-
     html, body {
   width: 100%;
   height:100%;
@@ -87,7 +86,7 @@ $('#cookie-ok').click(function(event){
 }
 
 .modal-backdrop {
-z-index: -1; // Hot Fix for broken backdrop
+z-index: -1; 
 }
 
 .content {
@@ -168,32 +167,25 @@ p,h1,h2,h3,h4,h5,div {
   font-size: 18px;
 }
 
-/* Dashed border */
 hr.dashed {
   border-top: 3px dashed #bbb;
 }
 
 .noselect {
-  -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-     -khtml-user-select: none; /* Konqueror HTML */
-       -moz-user-select: none; /* Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none; /* Non-prefixed version, currently
-                                  supported by Chrome and Opera */
+  -webkit-touch-callout: none;
+    -webkit-user-select: none;
+        -ms-user-select: none; 
+            user-select: none; 
 }
 
-/* Dotted border */
 hr.dotted {
   border-top: 3px dotted #bbb;
 }
 
-/* Solid border */
 hr.solid {
   border-top: 3px solid #bbb;
 }
 
-/* Rounded border */
 hr.rounded {
   border-top: 8px solid #bbb;
   border-radius: 5px;
@@ -203,21 +195,19 @@ hr.roundedd {
   border-top: 8px solid rgb(0, 0, 0);
 }
 
-/* The side navigation menu */
 .sidenav {
-  height: 100%; /* 100% Full-height */
-  width: 0; /* 0 width - change this with JavaScript */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Stay on top */
-  top: 0; /* Stay at the top */
+  height: 100%; 
+  width: 0; 
+  position: fixed; 
+  z-index: 1; 
+  top: 0; 
   left: 0;
-  background-color: #111; /* Black*/
-  overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 60px; /* Place content 60px from the top */
-  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  background-color: #111; 
+  overflow-x: hidden; 
+  padding-top: 60px;
+  transition: 0.5s
 }
 
-/* The navigation menu links */
 .sidenav a {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
@@ -227,12 +217,10 @@ hr.roundedd {
   transition: 0.3s;
 }
 
-/* When you mouse over the navigation links, change their color */
 .sidenav a:hover {
   color: #f1f1f1;
 }
 
-/* Position and style the close button (top right corner) */
 .sidenav .closebtn {
   position: absolute;
   top: 0;
@@ -241,13 +229,11 @@ hr.roundedd {
   margin-left: 50px;
 }
 
-/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
 #main {
   transition: margin-left .5s;
   padding: 20px;
 }
 
-/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
@@ -269,20 +255,20 @@ hr.roundedd {
   overflow: auto; /* Enable scroll if needed */
   background-color: rgb(167, 23, 23); /* Fallback color */
 }
-    #cookie-wrapper{
-        display: flex;
-        flex-direction: row;
-        padding: .6rem 0;
-    }
+#cookie-wrapper{
+    display: flex;
+    flex-direction: row;
+    padding: .6rem 0;
+}
 
-        #cookie-content{
-            border-right: 1px solid #1e67af;
-        }
+#cookie-content{
+  border-right: 1px solid #1e67af;
+}
 
-        #cookie-ok{
-            border: 0;
-            background: none;
-            color: rgb(255, 0, 212);
+#cookie-ok{
+  border: 0;
+  background: none;
+  color: rgb(255, 0, 212);
         }
   </style>
 </head>
@@ -302,10 +288,8 @@ hr.roundedd {
         <button id="cookie-ok">Let's go!</button>
     </div>
 </div>
-
   <h1>SnailFM</h1>
   <h4>Powered by <b>SnailDOS</b> team</h4>
-
   <p id="version"></p>
   <div id="notification" class="hidden">
     <p id="message"></p>
@@ -357,7 +341,6 @@ hr.roundedd {
     id="vid1"
     class="hidden"
     width="0" height="0"
-    poster="play.png"
     data-setup='{ "techOrder": ["youtube"], "sources": [{ "type": "video/youtube", "src": "https://www.youtube.com/watch?v=PfK213zXvvU"}] }'
   >  
   </video>
@@ -468,7 +451,7 @@ document.getElementById('volu23').value="100"
             <button onclick="openNav();" class="w3-btn w3-black">More Settings</button>
             <hr class="rounded">
             <p></p>
-              <a style="font-size:20px;cursor:pointer;color:red" href="reset.html">&#9776; Reset SnailFM</a>
+              <a style="font-size:20px;cursor:pointer;color:red" href="./src/pages/reset.html">&#9776; Reset SnailFM</a>
 <h1 class="hiddentext"></h1>
 </h1>
 </div>

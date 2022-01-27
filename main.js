@@ -69,7 +69,7 @@ const createLoadingScreen = () => {
     })
   );
   loadingScreen.setResizable(false);
-  loadingScreen.loadFile("splash.html");
+  loadingScreen.loadFile("./src/pages/splash.html");
   loadingScreen.on("closed", () => (loadingScreen = null));
   loadingScreen.webContents.on("did-finish-load", () => {
     loadingScreen.show();
@@ -130,7 +130,7 @@ function createWindow() {
           title: "SnailFM",
           body: "No valid network connection! Please reconnect!",
         };        
-      mainWindow.loadFile("nonet.html");
+      mainWindow.loadFile("./src/pages/nonet.html");
       new Notification(notification3).show();
       }
     })();

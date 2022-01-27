@@ -2,25 +2,23 @@
 <meta charset="UTF-8">
 <html>
 <head>
+	<script>
+		    window.jQuery = window.$ = require('jquery');
+	</script>
 <link rel="stylesheet" href="https://cdn.snaildos.com/bootstrap.min.css">
 <script src="https://cdn.snaildos.com/jquery.min.js"></script>
-<link rel="stylesheet" href="https://cdn.snaildos.com/w3.css">
 <script src="https://cdn.snaildos.com/bootstrap.min.js"></script>
-	<title>Loading SnailFM</title>
+	<title>Resetting SnailFM...</title>
+	<style type="text/css">
+		.bs-example{
+			margin: 20px;
+		}
+		</style>
     <style>
 body {
 	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-	background-size: 400% 400%;
-	animation: gradient 15s ease infinite;
-	-moz-user-select: none; /* Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none; /* Non-prefixed version, currently
-                                  supported by Chrome and Opera */
+	animation: gradient 12s ease infinite;
 }
-
-.bs-example {
-			margin: 20px;
-		}
 
 @keyframes gradient {
 	0% {
@@ -36,11 +34,21 @@ body {
     </style>
 </head>
 <body>
+	<script>
+		const Store = require('electron-store');
+  		const store = new Store();
+		console.log("Let's clear localstorage first...")
+		localStorage.removeItem('cookie-consent', 'true');
+		console.log("Just wait a bit...")
+		config.set('logged_in', false)
+		config.set('token', "null")
+		localStorage.setItem('version', '0.0.0.0');
+	</script>
 	<div class="bs-example">
-		<h2 class="w3-center">Loading SnailFM...</h2>
+		<h2>Resetting SnailFM...</h2>
 		<div class="progress">
 			<div class="progress-bar" id="bar">
-				<span class="sr-only"> No Network. </span>
+				<span class="sr-only">src</span>
 			</div>
 		</div>
 		<script type="text/javascript">
@@ -48,10 +56,12 @@ body {
 			var progressBar = $("#bar");
 			function countNumbers(){
 				if(i < 100){
-					i = i + 25;
+					i = i + 10;
 					progressBar.css("width", i + "%");
 				}
-				// Wait for sometime before running this script again
+				if(i > 90){
+					window.location.href = "restart.html";
+				}
 				setTimeout("countNumbers()", 1000);
 			}
 			countNumbers();
