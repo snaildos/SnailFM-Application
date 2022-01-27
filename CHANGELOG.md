@@ -1,5 +1,23 @@
 # Changelog
 
+<a name="2.1.5"></a>
+## 2.1.5 (2022-01-27)
+
+### Added
+
+- ✨ Change logo [[55da112](https://github.com/snaildos/SnailFM-Application/commit/55da112411eaa89bc5eed25cdbadbf01a61b9ffb)]
+- ✨ Tons of code cleanup [[0643b40](https://github.com/snaildos/SnailFM-Application/commit/0643b405d2136b4e4280c3dd0c3c4d6b9fc645d4)]
+
+### Miscellaneous
+
+-  Merge pull request [#65](https://github.com/snaildos/SnailFM-Application/issues/65) from snaildos/renovate/electron-16.x [[3055f08](https://github.com/snaildos/SnailFM-Application/commit/3055f0825700655228229a1f2be0f01cfe6d0355)]
+-  Merge pull request [#66](https://github.com/snaildos/SnailFM-Application/issues/66) from snaildos/renovate/axios-0.x [[bed18d1](https://github.com/snaildos/SnailFM-Application/commit/bed18d189c4e9a8cf1ca599e7e04cb3fe8598ae7)]
+-  Merge pull request [#67](https://github.com/snaildos/SnailFM-Application/issues/67) from snaildos/renovate/gitmoji-changelog-2.x [[6946a0e](https://github.com/snaildos/SnailFM-Application/commit/6946a0e920356de0e71176b76cf0a47a2c0e5265)]
+-  Update dependency gitmoji-changelog to v2.3.0 [[35417b4](https://github.com/snaildos/SnailFM-Application/commit/35417b48ad843aa24bf43a86470e378853c4f299)]
+-  Update dependency axios to v0.25.0 [[90b5ebf](https://github.com/snaildos/SnailFM-Application/commit/90b5ebff79ee0d80a7f306051e1793443c5cf7c1)]
+-  Update dependency electron to v16.0.7 [[864feed](https://github.com/snaildos/SnailFM-Application/commit/864feedaf5693ed8d1463f8bc3a1959b8e86e1e2)]
+
+
 <a name="2.1.4"></a>
 ## 2.1.4 (2022-01-03)
 
