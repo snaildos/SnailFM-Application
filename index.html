@@ -398,11 +398,9 @@ init()
 }
 $("#4").hide()
 </script>
-<br>
-<br>
-<br>
 <div class="w3-center streamvolume noselect">
   <input class="vertical" type="range" name="rangeInput" class="fader" min="0" max="100" oninput="updateTextInput(this.value);" id="volu23"></input>
+  <br>
   <input type="text" id="textInput" style="font-size:10px;" class="w3-black mixerdialogue w3-round-xlarge" value="Drag Slider!" readonly></input>
   <br>
   <b>(%) Music Volume</b>
@@ -446,9 +444,9 @@ document.getElementById('volu23').value="100"
             <h4>Please click what settings you want to change.</h4>
             <h4>If there is problems with SnailFM, please, press the "Reset" Button.</h4>
             <hr class="rounded">
-            <button onclick="window.location.reload();" class="w3-btn w3-black">Reload</button>
+            <button onclick="window.location.reload();" class="w3-btn w3-black w3-round">Reload</button>
             <p></p>
-            <button onclick="openNav();" class="w3-btn w3-black">More Settings</button>
+            <button onclick="openNav();" class="w3-btn w3-black w3-round">More Settings</button>
             <hr class="rounded">
             <p></p>
               <a style="font-size:20px;cursor:pointer;color:red" href="./src/pages/reset.html">&#9776; Reset SnailFM</a>
