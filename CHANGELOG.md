@@ -1,5 +1,24 @@
 # Changelog
 
+<a name="2.1.6"></a>
+## 2.1.6 (2022-02-27)
+
+### Miscellaneous
+
+-  Visual Improvments [[8af5891](https://github.com/snaildos/SnailFM-Application/commit/8af5891fa4c648a2fbb957cc522175311776943a)]
+-  Minor Visual Patches [[cb9de73](https://github.com/snaildos/SnailFM-Application/commit/cb9de733fb60c19577e1f9c9e1909063716208eb)]
+-  Merge branch &#x27;main&#x27; of https://github.com/snaildos/SnailFM-Application [[e45019b](https://github.com/snaildos/SnailFM-Application/commit/e45019b34fd1fa84ed9c722597c4265f25d4da44)]
+-  Merge pull request [#70](https://github.com/snaildos/SnailFM-Application/issues/70) from snaildos/renovate/electron-builder-22.x [[7340093](https://github.com/snaildos/SnailFM-Application/commit/7340093430bfb909bad82fbdece7b70693c80948)]
+-  Merge pull request [#71](https://github.com/snaildos/SnailFM-Application/issues/71) from snaildos/renovate/electron-updater-4.x [[3b2f660](https://github.com/snaildos/SnailFM-Application/commit/3b2f6600f94a8c3d4f9c29412f12eb13873e6776)]
+-  Merge pull request [#69](https://github.com/snaildos/SnailFM-Application/issues/69) from snaildos/renovate/electron-17.x [[d8c416a](https://github.com/snaildos/SnailFM-Application/commit/d8c416ae65e93d31b2bf85f307b5507e8e987888)]
+-  Merge pull request [#72](https://github.com/snaildos/SnailFM-Application/issues/72) from snaildos/renovate/axios-0.x [[c446043](https://github.com/snaildos/SnailFM-Application/commit/c44604301a3a4528b37047a3024bb2110c1ac723)]
+-  Update package.json [[eb93cca](https://github.com/snaildos/SnailFM-Application/commit/eb93ccaea8af2162c21b8d5957c758d55b37152f)]
+-  Update dependency electron-builder to v22.14.13 [[1c930a7](https://github.com/snaildos/SnailFM-Application/commit/1c930a7d0088813fa9e5d3eac57b2d745aa6b995)]
+-  Update dependency axios to v0.26.0 [[7a3feb0](https://github.com/snaildos/SnailFM-Application/commit/7a3feb01f2c4d3e0b14dc4e71bd9a10c204cce7b)]
+-  Update dependency electron-updater to v4.6.5 [[05ae977](https://github.com/snaildos/SnailFM-Application/commit/05ae977738637f82701920baff70c9f3b0187a3f)]
+-  Update dependency electron to v17 [[581f92f](https://github.com/snaildos/SnailFM-Application/commit/581f92f3aa8ee1ffcfc2396cd612967129be4d96)]
+
+
 <a name="2.1.5"></a>
 ## 2.1.5 (2022-01-27)
 
