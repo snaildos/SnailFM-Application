@@ -158,8 +158,8 @@ function createloginWindow() {
     center: true,
     show: false,
     webPreferences: {
-      nodeIntegration: true,
-      contextIsolation: false,
+      nodeIntegration: false,
+      contextIsolation: true,
     }
   }));
   loginWindow.hide()
