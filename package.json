@@ -19,7 +19,7 @@
   "license": "ISC",
   "devDependencies": {
     "electron": "17.2.0",
-    "electron-builder": "22.14.13",
+    "electron-builder": "23.1.0",
     "gitmoji-changelog": "2.3.0"
   },
   "build": {
