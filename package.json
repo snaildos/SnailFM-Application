@@ -1,6 +1,6 @@
 {
   "name": "SnailFM",
-  "version": "2.1.6",
+  "version": "2.1.7",
   "description": "SnailFM allows music with a simple click! Auto music, auto crediting, volume sliders and more. We provide the best nocopyright music made for your streams! If you are a streamer, please use StreamBop!",
   "main": "main.js",
   "repository": {
