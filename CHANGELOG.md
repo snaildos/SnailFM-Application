@@ -1,5 +1,27 @@
 # Changelog
 
+<a name="2.1.7"></a>
+## 2.1.7 (2022-08-28)
+
+### Miscellaneous
+
+-  Merge pull request [#82](https://github.com/snaildos/SnailFM-Application/issues/82) from snaildos/renovate/github-codeql-action-2.x [[c842aba](https://github.com/snaildos/SnailFM-Application/commit/c842aba0a1002ba9ba825d10802f8f2d28bf896d)]
+-  Bump Version [[08eeb66](https://github.com/snaildos/SnailFM-Application/commit/08eeb66f57cb71fbdba9178b6279fecef62e8fce)]
+-  Update github/codeql-action action to v2 [[0ed880e](https://github.com/snaildos/SnailFM-Application/commit/0ed880e553e1694d062284ce6a92c478543cbe5a)]
+-  Merge pull request [#94](https://github.com/snaildos/SnailFM-Application/issues/94) from snaildos/renovate/electron-20.x [[09fc7e7](https://github.com/snaildos/SnailFM-Application/commit/09fc7e70bac1d24c467725c71d52c4233d69f84d)]
+-  Merge pull request [#93](https://github.com/snaildos/SnailFM-Application/issues/93) from snaildos/renovate/jquery-3.x [[0f1d8fe](https://github.com/snaildos/SnailFM-Application/commit/0f1d8fe56a3697d145fab2c0514b5f51d9b117f1)]
+-  Update dependency electron to v20.1.0 [[e8e3900](https://github.com/snaildos/SnailFM-Application/commit/e8e3900b2052da69277538149302e437598d127f)]
+-  Update dependency jquery to v3.6.1 [[950a4a3](https://github.com/snaildos/SnailFM-Application/commit/950a4a3097f767e66492793eb749edf712b73d90)]
+-  Merge pull request [#89](https://github.com/snaildos/SnailFM-Application/issues/89) from snaildos/renovate/electron-builder-23.x [[4414906](https://github.com/snaildos/SnailFM-Application/commit/441490679d957937a48e5ee49e82df1248b4e9ed)]
+-  Merge pull request [#90](https://github.com/snaildos/SnailFM-Application/issues/90) from snaildos/renovate/electron-store-8.x [[2084a1e](https://github.com/snaildos/SnailFM-Application/commit/2084a1eeaf11fece810267e78f8ce672637561c6)]
+-  Merge pull request [#92](https://github.com/snaildos/SnailFM-Application/issues/92) from snaildos/renovate/electron-20.x [[54890b4](https://github.com/snaildos/SnailFM-Application/commit/54890b4f8cc273dc693204458980389a71b2ed53)]
+-  Merge pull request [#91](https://github.com/snaildos/SnailFM-Application/issues/91) from snaildos/renovate/electron-updater-5.x [[0237e9d](https://github.com/snaildos/SnailFM-Application/commit/0237e9dbdcc18677ca68abd572dc44a63976557b)]
+-  Update dependency electron-builder to v23.3.3 [[bd3329d](https://github.com/snaildos/SnailFM-Application/commit/bd3329d67e88796ff5538450659eafcb4d1e6baf)]
+-  Update dependency electron-store to v8.1.0 [[b11db2c](https://github.com/snaildos/SnailFM-Application/commit/b11db2c9815c4e471cd6079a5a3e9360d0492795)]
+-  Update dependency electron to v20 [[f864ff0](https://github.com/snaildos/SnailFM-Application/commit/f864ff048bc9afc5b80fd8eb8cf4c1ef0746165c)]
+-  Update dependency electron-updater to v5.2.1 [[ec944ab](https://github.com/snaildos/SnailFM-Application/commit/ec944ab70adb08a69b6e994a5885191763aaf2c0)]
+
+
 <a name="2.1.6"></a>
 ## 2.1.6 (2022-06-26)
 
