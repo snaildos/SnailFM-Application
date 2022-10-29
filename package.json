@@ -37,7 +37,7 @@
     "bufferutil": "^4.0.3",
     "discord-rpc": "4.0.1",
     "electron-store": "8.1.0",
-    "electron-updater": "5.2.1",
+    "electron-updater": "5.3.0",
     "glasstron": "0.1.1",
     "is-online": "9.0.1",
     "isdev": "1.0.1",
