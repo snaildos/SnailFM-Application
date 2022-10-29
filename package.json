@@ -18,7 +18,7 @@
   "author": "SnailDOS",
   "license": "ISC",
   "devDependencies": {
-    "electron": "20.1.0",
+    "electron": "21.2.0",
     "electron-builder": "23.3.3",
     "gitmoji-changelog": "2.3.0"
   },
