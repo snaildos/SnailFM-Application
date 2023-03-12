@@ -1,5 +1,38 @@
 # Changelog
 
+<a name="2.1.8"></a>
+## 2.1.8 (2023-03-12)
+
+### Miscellaneous
+
+-  Merge pull request [#105](https://github.com/snaildos/SnailFM-Application/issues/105) from snaildos/fix_transparent [[aabe231](https://github.com/snaildos/SnailFM-Application/commit/aabe231e3c414853b19a009aaba87ac786a39dfd)]
+-  Update nonet.html [[f885658](https://github.com/snaildos/SnailFM-Application/commit/f8856587b1bb38c8fa3196cde4736ff3108fbbc7)]
+-  Update logo imports [[312037c](https://github.com/snaildos/SnailFM-Application/commit/312037ce05179e483c9721e4b622e8ce8d8e164d)]
+-  Rewrite index.html to make everything cleaner [[9fa9ceb](https://github.com/snaildos/SnailFM-Application/commit/9fa9ceb4ed3ac0d7309468dd960867f0856ff4f0)]
+-  Update update.html [[1883be1](https://github.com/snaildos/SnailFM-Application/commit/1883be196b0907be274a7f4635746136d371c6ae)]
+-  Update Transparency module [[64759e3](https://github.com/snaildos/SnailFM-Application/commit/64759e34ee4d3c2547fb032628cc4defc5f00357)]
+-  Merge branch &#x27;main&#x27; of https://github.com/snaildos/SnailFM-Application [[1f50c8f](https://github.com/snaildos/SnailFM-Application/commit/1f50c8f4944490ad7b49541f67533daaea9588ec)]
+-  Update package.json [[a4fb791](https://github.com/snaildos/SnailFM-Application/commit/a4fb791b4b4c2abc571cc068fdac037f983e606a)]
+-  Merge pull request [#103](https://github.com/snaildos/SnailFM-Application/issues/103) from snaildos/renovate/electron-23.x [[4f49f47](https://github.com/snaildos/SnailFM-Application/commit/4f49f479dc8d6858a82db838df7c3401b9fd0266)]
+-  Merge pull request [#104](https://github.com/snaildos/SnailFM-Application/issues/104) from snaildos/renovate/utf-8-validate-6.x [[e3b7b4e](https://github.com/snaildos/SnailFM-Application/commit/e3b7b4e720b27dfa0c847a7dd471e299b3a18f0c)]
+-  Merge pull request [#101](https://github.com/snaildos/SnailFM-Application/issues/101) from snaildos/renovate/jquery-3.x [[ecd3716](https://github.com/snaildos/SnailFM-Application/commit/ecd3716fc850e7720c0900bfe0f87304882438cb)]
+-  Merge pull request [#102](https://github.com/snaildos/SnailFM-Application/issues/102) from snaildos/renovate/axios-1.x [[c311ef6](https://github.com/snaildos/SnailFM-Application/commit/c311ef6130bedfdf0379146b47a6e87ed17a58f4)]
+-  Update dependency utf-8-validate to v6 [[719aaaf](https://github.com/snaildos/SnailFM-Application/commit/719aaaf842127610b4627d1ee150d1725318ed2d)]
+-  Update dependency electron to v23 [[b02027c](https://github.com/snaildos/SnailFM-Application/commit/b02027ce7ef27b57647f27363d78f854f28b090a)]
+-  Update dependency axios to v1.3.4 [[029fef5](https://github.com/snaildos/SnailFM-Application/commit/029fef591b4d9066d952175e634047c41093e0b8)]
+-  Update dependency jquery to v3.6.4 [[3ed9a77](https://github.com/snaildos/SnailFM-Application/commit/3ed9a774de4e300300c748ad1d37b05ec5b15650)]
+-  Merge pull request [#96](https://github.com/snaildos/SnailFM-Application/issues/96) from snaildos/renovate/electron-builder-23.x [[02c9c79](https://github.com/snaildos/SnailFM-Application/commit/02c9c79c0cf64efd7261e3a9b152c62c29bf3ea6)]
+-  Merge pull request [#97](https://github.com/snaildos/SnailFM-Application/issues/97) from snaildos/renovate/electron-updater-5.x [[1d64e13](https://github.com/snaildos/SnailFM-Application/commit/1d64e133eced358be25b77b31b75ee9b11ad9bf3)]
+-  Merge pull request [#98](https://github.com/snaildos/SnailFM-Application/issues/98) from snaildos/renovate/universal-analytics-0.x [[6e1d281](https://github.com/snaildos/SnailFM-Application/commit/6e1d281189905a52dea135bc923ed62348da373b)]
+-  Merge pull request [#99](https://github.com/snaildos/SnailFM-Application/issues/99) from snaildos/renovate/axios-1.x [[93f1026](https://github.com/snaildos/SnailFM-Application/commit/93f10269789dbdb938d575fbbddcfc6660d43c02)]
+-  Merge pull request [#100](https://github.com/snaildos/SnailFM-Application/issues/100) from snaildos/renovate/electron-21.x [[d39c426](https://github.com/snaildos/SnailFM-Application/commit/d39c426551c661ede62705651f29ed4532d09b4c)]
+-  Update dependency electron-builder to v23.6.0 [[53f5697](https://github.com/snaildos/SnailFM-Application/commit/53f5697653f15657c8001bbb931053ae1af9bfd7)]
+-  Update dependency electron to v21 [[9f5d453](https://github.com/snaildos/SnailFM-Application/commit/9f5d453d1319c7d3c884f972dbce3dd3097f77c4)]
+-  Update dependency axios to v1 [[f5a509c](https://github.com/snaildos/SnailFM-Application/commit/f5a509c8dd14e033ddcf59d4a7d0c361ce89be93)]
+-  Update dependency universal-analytics to v0.5.3 [[272a3ce](https://github.com/snaildos/SnailFM-Application/commit/272a3cea3aac48b9d845a95556d159c77fe84fab)]
+-  Update dependency electron-updater to v5.3.0 [[cc31124](https://github.com/snaildos/SnailFM-Application/commit/cc31124422c34f200e4dcd52c936354bd83114a3)]
+
+
 <a name="2.1.7"></a>
 ## 2.1.7 (2022-08-28)
 
