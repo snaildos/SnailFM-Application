@@ -3,7 +3,8 @@ const { SSL_OP_EPHEMERAL_RSA } = require("constants");
 const { app, BrowserWindow, ipcMain, protocol, ipcRenderer } = require("electron");
 const { watchFile } = require("fs");
 const { trackEvent } = require("./lib/analytics.js");
-const glasstron = require("glasstron");
+const {TitlebarRespect} = require('electron-titlebar-respect')
+const glasstron = require('glasstron-clarity');
 const electron = require("electron");
 const isOnline = require('is-online');
 const Store = require("electron-store");
@@ -28,25 +29,6 @@ function wait(ms) {
 require("./lib/rpc.js");
 console.log("RPC lib init.");
 
-// Blur Service
-if (process.platform == "darwin") {
-  app.whenReady().then(() => {
-    // macOS
-    global.blurType = "vibrancy";
-    global.windowFrame = "false";
-  });
-} else if (process.platform == "win32") {
-  app.whenReady().then(() => {
-    // Windows
-    global.blurType = "acrylic";
-    global.windowFrame = "false"; // The effect won't work properly if the frame
-    // is enabled on Windows
-  });
-} else {
-    // Linux
-    global.blurType = "blurbehind";
-    global.windowFrame = "true";
-}
 
 // Loading screen
 /// create a global var, wich will keep a reference to out loadingScreen window
@@ -77,9 +59,6 @@ const createLoadingScreen = () => {
 };
 console.log("Loading screen ready.");
 
-// Convert boolean to string
-var windowframz = (global.windowFrame === 'true');
-
 // Start the main program
 let mainWindow;
 
@@ -88,14 +67,14 @@ function createWindow() {
     width: 800,
     height: 600,
     show: false,
-    titlebarStyle: "hiddenInset",
-    frame: windowframz,
-    titlebarStyle: 'hiddenInset',
+    frame: global.frame,
+    titleBarStyle: global.titleBarStyle,
     fullscreen: false,
     blur: true,
     blurType: global.blurType,
     modal: true,
     icon: "snailfm.ico",
+    trafficLightPosition: { x: 24, y: 25 },
     webPreferences: {
       nodeIntegration: true,
       nativeWindowOpen: true,
