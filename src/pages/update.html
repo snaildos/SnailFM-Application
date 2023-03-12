@@ -2,19 +2,18 @@
 <meta charset="UTF-8">
 <html>
 <head>
-	<script>
-		    window.jQuery = window.$ = require('jquery');
-	</script>
+<script>
+		window.jQuery = window.$ = require('jquery');
+</script>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-	<title>Resetting SnailFM... </title>
-	<style type="text/css">
-		.bs-example{
-			margin: 20px;
-		}
-		</style>
-    <style>
+<title>Resetting SnailFM... </title>
+<style type="text/css">
+.bs-example{
+	margin: 20px;
+}
+
 body {
 	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
 	background-size: 400% 400%;
@@ -32,24 +31,26 @@ body {
 		background-position: 0% 50%;
 	}
 }
-    </style>
+</style>
 </head>
 <body>
 	<script>
+		// Import modules
 		const Store = require('electron-store');
   		const store = new Store();
+		// Start process
 		console.log("Let's clear localstorage first...")
 		localStorage.removeItem('cookie-consent', 'true');
 		console.log("Just wait a bit...")
 		console.log("Update true. Setting now.")
-		localStorage.setItem('version', '2.0.9');
+		localStorage.setItem('version', '2.1.8');
 		// import rest of stuff here
 		store.set('setup', true)
 		store.set('logged_in', false)
 		config.set('token', "null")
 	</script>
 	<div class="bs-example">
-		<h2>Updating SnailFM libs...</h2>
+		<h2>Updating SnailFM...</h2>
 		<div class="progress">
 			<div class="progress-bar" id="bar">
 				<span class="sr-only">src</span>
