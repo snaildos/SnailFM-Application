@@ -108,12 +108,12 @@ function createWindow() {
         const notification3 = {
           title: "SnailFM",
           body: "No valid network connection! Please reconnect!",
-        };        
+        };
       mainWindow.loadFile("./src/pages/nonet.html");
       new Notification(notification3).show();
       }
     })();
-    
+
     mainWindow.show();
     console.log("Ok! Window init, let's check for updates...");
     autoUpdater.checkForUpdatesAndNotify();
@@ -147,7 +147,7 @@ function createloginWindow() {
     const notification4 = {
       title: "SnailFM",
       body: "This window won't close unless you login! If you want to exit SnailFM, press the close button 3 times!",
-    };        
+    };
     loginclose = loginclose + 1;
     if (loginclose === 3) {
       store.set('logged_in', false)
@@ -158,7 +158,7 @@ function createloginWindow() {
         new Notification(notification4).show();
       }
     }
-  
+
   });
   loginWindow.setMenuBarVisibility(false) 
   ipcMain.on('login_sar', () => {loginWindow.show(); loginWindow.loadURL("https://login.snaildos.com?redir=snailfm://login"); loginWindow.maximize(); ipcMain.emit('main_hide')})
@@ -167,6 +167,7 @@ function createloginWindow() {
   ipcMain.on('login_exit', () => {loginWindow.destroy();})
   loginWindow.loadURL("https://login.snaildos.com?redir=snailfm://login");
 }
+
 app.whenReady().then(() => {
   ipcMain.on('token_verify', function() {
     if ((store.get('logged_in') === false)) {
@@ -223,7 +224,7 @@ app.whenReady().then(() => {
   }
 }
 })
-  
+
   app.setAsDefaultProtocolClient("snailfm");
   protocol.registerHttpProtocol('snailfm', (req, cb) => {
     const url = req.url.substr(22)
@@ -239,6 +240,7 @@ app.whenReady().then(() => {
         store.set('createonlogin', false);
       }
   })
+
   app.on("open-url", (event, url) => {
     const url2 = req.url.substr(22)
     console.log("Logging in: "+url2);
