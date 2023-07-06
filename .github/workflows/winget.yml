@@ -8,6 +8,6 @@ jobs:
     steps:
       - uses: vedantmgoyal2009/winget-releaser@v2
         with:
-          identifier: Package.Identifier
+          identifier: SnailDOS.SnailFM
           max-versions-to-keep: 5
           token: ${{ secrets.WINGET_TOKEN }}
