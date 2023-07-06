@@ -40,7 +40,7 @@
     "electron-titlebar-respect": "^1.0.0",
     "electron-updater": "5.3.0",
     "glasstron-clarity": "^0.1.26",
-    "is-online": "9.0.1",
+    "is-online": "10.0.0",
     "isdev": "1.0.1",
     "jquery": "3.6.4",
     "universal-analytics": "0.5.3",
