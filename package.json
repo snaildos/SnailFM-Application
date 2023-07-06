@@ -38,7 +38,7 @@
     "discord-rpc": "4.0.1",
     "electron-store": "8.1.0",
     "electron-titlebar-respect": "^1.0.0",
-    "electron-updater": "5.3.0",
+    "electron-updater": "6.1.1",
     "glasstron-clarity": "^0.1.26",
     "is-online": "9.0.1",
     "isdev": "1.0.1",
