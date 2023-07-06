@@ -15,6 +15,7 @@ store.set('createonlogin', false)
 // Notify
 const { Notification } = require("electron");
 electron.app.commandLine.appendSwitch("enable-transparent-visuals");
+TitlebarRespect({})
 
 // wait function
 function wait(ms) {

@@ -5,3 +5,5 @@ electron-builder.yml
 package-lock.json
 package-lock.json
 yarn.lock
+.yarn/unplugged
+.yarn/cache/*.zip
