@@ -1,10 +1,24 @@
 # Changelog
 
 <a name="2.1.8"></a>
-## 2.1.8 (2023-03-12)
+## 2.1.8 (2023-07-06)
 
 ### Miscellaneous
 
+-  BUMP: Minor packages [[27d4daf](https://github.com/snaildos/SnailFM-Application/commit/27d4daf0c97ea31ae0240a9d26b6338f84db2d43)]
+-  FEAT: Rewrite compatibility support [[b16dc25](https://github.com/snaildos/SnailFM-Application/commit/b16dc25cea337634a5d2a97f9970ff816f9ce9dd)]
+-  Merge pull request [#109](https://github.com/snaildos/SnailFM-Application/issues/109) from snaildos/renovate/electron-25.x [[4a58f2d](https://github.com/snaildos/SnailFM-Application/commit/4a58f2d158c5ebf93aa3fb4b067cfb675c93b9f0)]
+-  Merge pull request [#106](https://github.com/snaildos/SnailFM-Application/issues/106) from snaildos/renovate/axios-1.x [[ace7ef5](https://github.com/snaildos/SnailFM-Application/commit/ace7ef50915ee670acddda7f0d9115ceb739294e)]
+-  Merge pull request [#108](https://github.com/snaildos/SnailFM-Application/issues/108) from snaildos/renovate/jquery-3.x [[c59679d](https://github.com/snaildos/SnailFM-Application/commit/c59679de0fa7441759cc974205326e1886096501)]
+-  Merge pull request [#110](https://github.com/snaildos/SnailFM-Application/issues/110) from snaildos/renovate/electron-builder-24.x [[4b39fb0](https://github.com/snaildos/SnailFM-Application/commit/4b39fb0416206bb5fe579f12d5b3e57e93f18348)]
+-  Merge pull request [#111](https://github.com/snaildos/SnailFM-Application/issues/111) from snaildos/renovate/electron-updater-6.x [[9d5cdec](https://github.com/snaildos/SnailFM-Application/commit/9d5cdec872b56b4acf2df1800d53c0a6dc7168f8)]
+-  Update dependency electron to v25 [[b466cb0](https://github.com/snaildos/SnailFM-Application/commit/b466cb0d220a0007bec118c27196722fd62cee5d)]
+-  Update dependency electron-updater to v6 [[862a107](https://github.com/snaildos/SnailFM-Application/commit/862a1070e5ee0ad6128a241d5db706152e9b6eb8)]
+-  Update dependency electron-builder to v24 [[9f44875](https://github.com/snaildos/SnailFM-Application/commit/9f44875b8b74cb27a72754de6dd8cbbe35a15f56)]
+-  Update dependency jquery to v3.7.0 [[a7c277b](https://github.com/snaildos/SnailFM-Application/commit/a7c277b05a6205ffbd659dfd9b910950bdbd0720)]
+-  Update dependency axios to v1.4.0 [[697a032](https://github.com/snaildos/SnailFM-Application/commit/697a032aa3e64c660e58021bfcaace438d7cc53a)]
+-  FEAT: Cleanup [[8eb0b15](https://github.com/snaildos/SnailFM-Application/commit/8eb0b1509161daf89af5fe0adabaf63899046dca)]
+-  Update CHANGELOG.md [[2d8ce0e](https://github.com/snaildos/SnailFM-Application/commit/2d8ce0e4f432ac0895490d1f5349f559daf2a6b4)]
 -  Merge pull request [#105](https://github.com/snaildos/SnailFM-Application/issues/105) from snaildos/fix_transparent [[aabe231](https://github.com/snaildos/SnailFM-Application/commit/aabe231e3c414853b19a009aaba87ac786a39dfd)]
 -  Update nonet.html [[f885658](https://github.com/snaildos/SnailFM-Application/commit/f8856587b1bb38c8fa3196cde4736ff3108fbbc7)]
 -  Update logo imports [[312037c](https://github.com/snaildos/SnailFM-Application/commit/312037ce05179e483c9721e4b622e8ce8d8e164d)]
